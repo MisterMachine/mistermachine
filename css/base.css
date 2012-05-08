@@ -1,0 +1,385 @@
+/* Table of Content
+==================================================
+	#Reset
+	#Global
+	#Type
+	#Links
+	#Layout
+	#Feed
+	#Sidebar
+	#Footer
+	#Navigation
+	#Forms */
+	
+/* Reset 
+================================================== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+/* Type 
+================================================== */
+
+h1, h2, h3, h4, h5, h6	{ position: relative; }
+h1	{ font-family: superclarendon,serif; font-size: 100px; line-height: 100px; font-weight: normal;  }
+h2	{ font-size: 22px; line-height: 30px; font-weight: normal;  }
+h3	{ font-family: superclarendon,serif;  font-size: 32px; line-height: 36px; font-weight: normal; }
+h4	{ font-size: 13px; line-height: 20px; font-weight: normal; }
+h5	{ font-size: 13px; line-height: 20px; }
+h6	{ font-size: 13px; line-height: 20px; }
+
+p, pre, address	{ font-size: 18px; line-height: 26px; position: relative; }
+abbr, code, kbd,
+samp, small, var	{ line-height: 15px; }
+ul, ol, dl, dialog	{ font-size: 13px; line-height: 20px; position: relative; }
+li ul, li ol, ul ul, ol ol	{ margin-top: 0; margin-bottom: 0;}
+.small { color: #999; font-size: 12px; }
+
+form, legend, label	{ font-size: 13px; line-height: 18px; }
+legend	{ position: relative; display: block; }
+
+
+/* Global
+================================================== */
+body { font-family: Georgia, serif; color: #333; background: url(../img/bg.png) 0 0 repeat #fff; }
+
+header { padding-bottom: 60px; }
+
+section { width: 100%; }
+	section.head { }
+	.inner, .inner ul { width: 100%; }
+
+section article { margin: 0 auto; overflow: hidden; }
+	section.hat { background-color: #333; }
+
+.right { float: right; }
+
+/* Header
+================================================== */	
+.hat.contact { overflow: hidden; }
+.hat { height: 12px; overflow: hidden; } 
+
+	.hgroup { text-align: left; clear: both; }
+	.hgroup h1 { margin: 0 auto 20px auto; }
+		h1.full { display: block; font-size: 120px; line-height: 100px; font-family: superclarendon,serif; color: #333; letter-spacing: -4px; background: url(../img/logo.png) right 10px no-repeat; padding-top: 80px; padding-right: 300px;}
+		h1.mini { display: none; }
+			h2.full { display: block; font-size: 90px; line-height: 100px; font-family: superclarendon,serif; color: #333; margin: 0 0 40px 0; letter-spacing: -4px;}
+
+h2.full { margin-bottom: 80px; }
+
+/* Nav
+================================================== */
+nav { display: block; font-family: alternate-gothic-no-1-d,sans-serif; text-transform: uppercase; }
+	nav ul { margin: 40px auto; overflow: hidden; background: #15b4e6; }
+	nav .item { float: left; display: inline; position: relative; color: #fff; }
+	nav a { font-size: 32px; float: left; color: #fff; text-align: center; width: 100%; padding: 20px 0; text-decoration: none; background: #15b4e6;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35); }
+		nav a:hover { }
+
+#steps {  margin: 40px 0; padding: 0; overflow: hidden; background: rgba(255,255,255,0.3); }
+	h3 { }
+	#steps li { float: left; display: inline; font-size: 18px; line-height: 26px; text-align: center; }
+    	#steps li li { width: 100%; padding: 10px 0; border-bottom: 1px solid #ccc; background: rgba(255,255,255,0.2);  }
+			#steps .span {   }
+			
+/* Grid
+================================================== */
+.content { position: relative; overflow: hidden; }
+
+#gallery li.single {  }
+#gallery li {  }
+
+#gallery li.single:nth-child(1) { margin-right: -50px; margin-top: 50px; z-index: 1; }
+#gallery li.single:nth-child(2) { position: relative; z-index: 2; }
+#gallery li.single:nth-child(3) { margin-left: -50px; margin-top: 50px; z-index: 1; }
+
+#gallery p { font-family: Helvetica, sans-serif; color: #333; font-size: 14px; line-height: 22px; }
+#gallery li img { float: left; max-width: 100%; }
+	#gallery .inner {  }
+
+.container_12 .full.grid_12 { width: 90%; margin-left: 3%;
+    margin-right: 3%; }
+
+#gallery li.full, #gallery li.mobile { margin-bottom: 100px; }
+#gallery li.full img, #gallery li.single img { background: -moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); box-shadow: 0 0 2px 2px rgba(0,0,0,0.1); margin: 40px 0 0 0; }
+
+	.cell p { padding: 0; font-size: 14px; line-height: 22px;}
+	.cell img { float: left; }	
+	.cell.odd { background-color: #ccc; }
+
+.mobile ul { padding-left: 20px; }
+	
+article { padding: 60px 0;  margin-left: 240px; }
+
+/* Footer
+================================================== */
+
+footer { position: relative; overflow: hidden; }
+footer .inner { border-bottom: solid 10px #333;  }
+footer .grid { margin: 80px auto 80px auto; text-align: center; overflow: hidden; }
+
+
+footer ul { margin-bottom: 80px; overflow: hidden; }
+footer li { float:left; display: inline; margin: 0 50px; }
+footer li a { float:left; display: block; background-color: #333; height: 60px; width: 60px; 
+	background: url(../img/light-social-icons.png) 0 0 no-repeat transparent; }
+	li.btn-rss a { background-position: 0 0; }
+	li.btn-dribble a { background-position: -60px 0; }
+	li.btn-forrst a { background-position: -120px 0; }
+	li.btn-twitter a { background-position: -180px 0; }
+	li.btn-facebook a { background-position: -240px 0; }
+	
+footer h2 { text-align: center; }
+
+
+/* Links
+================================================== */
+
+.links { display: block; overflow: hidden; position: absolute; width: 220px; top: 230px; left: 20px; }
+	.links ul { display: block; overflow: hidden; }
+		.links li { font-size: 12px; display: block; overflow: hidden; margin: 10px 0;}
+		.links li a { float: left; padding: 9px 18px; background-color: #fff; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; display: block; text-decoration: none; color: #666;}
+			.links li a:hover { background-color: #eee; }
+			
+.btn_one { float: left; font-size: 100px; line-height: 1em; font-family: superclarendon,serif; color: #fff; text-decoration: none; margin-top: 20px; }
+
+
+/* Forms 
+================================================== */
+
+form {  }
+legend { padding-bottom: 18px; background: #eee; padding: 10px; display: block; font-weight: bold; margin-bottom: 5px; }
+label { padding-top: 5px; margin: 0; float: left; display: block; font-weight: bold; }
+label span {  }
+input[type="text"],
+input[type="password"],
+input[type="select"],
+input[type="search"] { padding: 8px 8px; border: 0;
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+input[type="file"] { border: none; }
+textarea { display: block; margin-bottom: -2px; padding: 6px 8px; border: solid 1px #ccc; width: 99%; line-height: 18px; overflow: auto; resize: none; clear: left; }
+select { float: left; display: block; margin-top: 2px; margin: 0; }
+input[type="submit"],
+input[type="reset"],
+input[type="button"] { font-family: Helvetica, arial, sans-serif; margin-bottom: 0; }
+
+input[type="text"]:focus, textarea:focus { background: #c0ebf9; }
+
+input.btn, .btn { font-family: Helvetica, arial, sans-serif; display: block; border: 0; color: #fff; font-weight: bold; cursor: pointer;
+	-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+		
+.radio	{ margin: 6px 0 0 1px; float: left; display: block; clear: left;}
+.radio_label { margin: 0 0 13px 0; padding-left: 18px; float: none; display: block; clear: none; }
+
+.checkbox { margin: 6px 0 0 1px; float: left; display: block; clear: left;}
+.checkbox_label { margin: 0 0 13px 0; padding-left: 18px; float: none; display: block; clear: none; }
+
+input.text, textarea { font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-size: 18px; line-height: 22px; margin-bottom: 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+.field-btn { padding: 20px 0; }
+.field-file { padding: 20px 0; }
+.file { margin-left: 15px; }
+
+.check, .radio { padding: 5px 0; }
+.section { position: relative; }
+form.full-form { padding: 30px 15px; }
+
+/* Form errors */
+label.error input.text, 
+textarea.msg_error  { border: solid 1px red; margin-bottom: 0; background-color: #fee7e7; }
+	label.error span.msg_error { font-size: 10px; color: red; }
+
+/* Form widths */
+.width1 { width: 140px; }
+.width2 { width: 320px; }
+.width3 { width: 500px; }
+.width4 { margin-left: 0 !important; width: 660px; }
+
+.unitx1 { width: 160px; }
+.unitx2 { width: 210px; }
+.unitx3 { width: 270px; }
+.unitx4 { width: 360px; }
+
+label.width1, 
+label.width2, 
+label.width3, 
+label.width4 { float: left; margin-left: 18px; }
+
+label.unitx1, 
+label.unitx2, 
+label.unitx3, 
+label.unitx4 { float: left; margin-left: 18px; }
+
+label.first { margin-left: 0; }
+label.width4 { width: 648px; }
+
+label.width1 input[type="text"], 
+label.width1 input[type="password"], 
+label.width1 input[type="select"], 
+label.width1 input[type="search"] { width: 128px; }
+label.width2 input[type="text"], 
+label.width2 input[type="password"], 
+label.width2 input[type="select"], 
+label.width2 input[type="search"] { width: 308px; }
+label.width3 input[type="text"], 
+label.width3 input[type="password"], 
+label.width3 input[type="select"], 
+label.width3 input[type="search"] { width: 488px; }
+label.width4 input[type="text"], 
+label.width4 input[type="password"], 
+label.width4 input[type="select"], 
+label.width4 input[type="search"] { width: 648px; }
+
+label.width1 select { width: 180px; }
+label.width2 select { width: 360px; }
+label.width3 select { width: 540px; }
+label.width4 select { width: 720px; }
+
+label.unitx1 input[type="text"], 
+label.unitx1 input[type="password"], 
+label.unitx1 input[type="select"], 
+label.unitx1 input[type="search"] { width: 120px; }
+label.unitx2 input[type="text"], 
+label.unitx2 input[type="password"], 
+label.unitx2 input[type="select"], 
+label.unitx2 input[type="search"] { width: 180px; }
+label.unitx3 input[type="text"], 
+label.unitx3 input[type="password"], 
+label.unitx3 input[type="select"], 
+label.unitx3 input[type="search"] { width: 270px; }
+label.unitx4 input[type="text"], 
+label.unitx4 input[type="password"], 
+label.unitx4 input[type="select"], 
+label.unitx4 input[type="search"] { width: 360px; }
+
+label.unitx1 select { width: 160px; }
+label.unitx2 select { width: 210px; }
+label.unitx3 select { width: 270px; }
+label.unitx4 select { width: 360px; }
+.label { display: none; }
+
+.fieldset { overflow: hidden; }
+
+
+@media screen
+and (min-width : 960px) {
+	.container_12 { max-width: 960px; margin: 0 auto; }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media screen
+and (max-width : 960px) {
+/* Styles */
+h1.full { display: block; font-size: 120px; line-height: 100px; font-family: superclarendon,serif; color: #333; letter-spacing: -4px; background: url(http://mistermachine.com/dev/livewell/logo.png) right 5px no-repeat; padding-top: 160px; }
+
+h2.full { font-size: 65px; line-height: 65px; letter-spacing: -1px; text-align: center; 
+		padding: 20px 0 40px 0; margin-bottom: 15px;}
+
+
+}
+
+
+/* iPads (landscape) ----------- */
+@media screen
+and (min-width : 768px) 
+and (max-width : 1024px)
+and (orientation : landscape) {
+
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media screen
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {
+
+
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media screen
+and (min-width : 768px) {
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media screen
+and (max-width : 760px) {
+/* Styles */
+h1.full { display: block; font-size: 100px; line-height: 100px; font-family: superclarendon,serif; color: #333; letter-spacing: -4px; background: url(http://mistermachine.com/dev/livewell/logo.png) right 5px no-repeat; padding-top: 240px; background-size: 294px 250px; }
+nav a { font-size: 26px;}
+.container_12 #gallery .full.grid_12 { width: 100%; }
+#gallery li.triple { display: none; }
+.container_12 .single.grid_4 { width: 48%; }
+
+h2.full { font-size: 40px; line-height: 50px; letter-spacing: -1px; text-align: center; 
+		padding: 20px 0 70px 0; margin-bottom: 15px;}
+
+}
+
+/* Gallery ----------- */
+@media screen
+and (max-width : 480px) {			
+	h1.full { font-size: 70px; line-height: 70px; background-size: 235px 200px; padding-top: 200px; }
+	#gallery li { float: left;  width: 100%; } 
+		#gallery li.single { display: none; }
+		#gallery li.single.feature { display: block; }
+		
+		.container_12 #gallery .full.grid_12 {  }
+		.mobile ul { padding: 0; }
+		#gallery li.single:nth-child(1) { margin: 0; } 
+		h2.full { font-size: 36px; line-height: 50px; letter-spacing: -1px; text-align: center; 
+		padding: 20px 0 10px 0; margin-bottom: 15px;}
+		
+		h1.full {
+		font-size: 60px;
+		line-height: 62px;
+		background-size: 235px 200px;
+		padding-top: 180px;
+		}
+		
+		footer ul { margin-bottom: 150px; }
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media screen
+and (max-width : 360px) {
+
+#gallery li { float: left; overflow: hidden; width: 100%; }
+	#gallery li.single { display: none; }
+		#gallery li.single.feature { display: block; }
+		
+		.container_12 #gallery .full.grid_12 { width: 100%; }
+		
+		#gallery li.full img, #gallery li.single img { margin-top: 10px;}
+		#gallery h3 { text-align: center; font-size: 24px; }
+		#gallery p { display: block;font-size: 12px; text-align: center; }
+		.mobile ul { padding: 0; }
+		#gallery li.single:nth-child(1) { margin: 0; } 
+		
+/* Styles */	
+	#nav ul { background: none; }
+	#nav li { display: block; margin: 0; width: 100%; }
+		#nav li { margin-bottom: 1px; }
+			#nav a { display: block; }
+			
+	#gallery li { float: none; display: block; margin: 0; width: 100%; } 
+	
+	h1.full { display: none; }
+		h1.mini, footer h2 { display: block; margin-top: 15px; margin-bottom: 10px;}
+		h2.full { font-size: 28px; line-height: 50px; letter-spacing: -1px; 
+		padding: 20px 0 0 0; margin-bottom: 15px;}
+	
+	.bio { padding-bottom: 20px; }
+	#steps li { width: 100%; margin: 0; padding: 20px 0; color: #fff; background: #333; }
+		
+}
