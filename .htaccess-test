@@ -1,8 +1,8 @@
 # Add server authentication for test server
-#AuthType Basic
-#AuthName "mrm"
-#AuthUserFile "/home/secure/apasswords"
-#Require valid-user
+AuthType Basic
+AuthName "alwaysmoney"
+AuthUserFile "/home/secure/apasswords"
+Require valid-user
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
