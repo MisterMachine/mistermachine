@@ -1,6 +1,6 @@
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 
-set :domain, "mrmwork.com"
+set :domain, "mistermachineshop.com"
 set :user, "root"
 set :repo_user, "menslow"
 set :repo_name, "mistermachine"

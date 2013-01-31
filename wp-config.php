@@ -14,24 +14,78 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'mistermachine');
-
-/** MySQL database username */
-define('DB_USER', 'mrmweb');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'eetdfXY8F7pCVb');
-
-/** MySQL hostname */
-define('DB_HOST', '127.0.0.1');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+/*
+ * Environment specific configuration:
+ *
+ */
+if ( file_exists( dirname( __FILE__ ) . '/../env_local') ) {
+	// Local Environment
+	define('WP_ENV', 'local');
+	define('WP_DEBUG', true);
+	define('DB_NAME', 'mistermachine');
+	define('DB_USER', 'mrmweb');
+	define('DB_PASSWORD', 'eetdfXY8F7pCVb');
+	define('DB_HOST', '127.0.0.1');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define('GOOGLE_ID', 'UA-XXXXXXXX-X'); // Google Analytics ID
+	define('FB_APP_ID', ''); // Facebook App ID
+	define('FB_APP_SECRET', ''); // Facebook App Secret
+	define('MC_API', ''); // MailChimp API Key
+	define('MC_LIST_ID', ''); // MailChimp List ID
+	define('EMAIL_CONTACT', 'michael.enslow@gmail.com'); 
+	define('TYPEKIT_ID', ''); // Typekit ID for JavaScript
+} elseif ( file_exists( dirname( __FILE__ ) . '/../env_design') ) {
+	// Local for designer
+	define('WP_ENV', 'design');
+	define('WP_DEBUG', false);
+	define('DB_NAME', 'esra');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+	define('DB_HOST', '127.0.0.1:8889');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define('GOOGLE_ID', 'UA-XXXXXXXX-X'); // Google Analytics ID
+	define('FB_APP_ID', ''); // Facebook App ID
+	define('FB_APP_SECRET', ''); // Facebook App Secret
+	define('MC_API', ''); // MailChimp API Key
+	define('MC_LIST_ID', ''); // MailChimp List ID
+	define('EMAIL_CONTACT', 'michael.enslow@gmail.com'); 
+	define('TYPEKIT_ID', ''); // Typekit ID for JavaScript
+} elseif ( file_exists( dirname( __FILE__ ) . '/../../shared/env_test' ) ) {
+	// Test Environment
+	define('WP_ENV', 'test');
+	define('WP_DEBUG', false);
+	define('DB_NAME', 'mistermachine');
+	define('DB_USER', 'mrmweb');
+	define('DB_PASSWORD', '9OlasvIyXYZ7mR');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define('GOOGLE_ID', 'UA-XXXXXXXX-X'); // Google Analytics ID
+	define('FB_APP_ID', ''); // Facebook App ID
+	define('FB_APP_SECRET', ''); // Facebook App Secret
+	define('MC_API', ''); // MailChimp API Key
+	define('MC_LIST_ID', ''); // MailChimp List ID
+	define('EMAIL_CONTACT', 'michael.enslow@gmail.com');
+	define('TYPEKIT_ID', ''); // Typekit ID for JavaScript
+} else {
+	define('WP_ENV', 'production');
+	define('WP_DEBUG', false);
+	define('DB_NAME', 'esra');
+	define('DB_USER', 'esraweb');
+	define('DB_PASSWORD', '');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+	define('GOOGLE_ID', 'UA-XXXXXXXX-X'); // Google Analytics ID
+	define('FB_APP_ID', ''); // Facebook App ID
+	define('FB_APP_SECRET', ''); // Facebook App Secret
+	define('MC_API', ''); // MailChimp API Key
+	define('MC_LIST_ID', ''); // MailChimp List ID
+	define('EMAIL_CONTACT', 'michael.enslow@gmail.com'); 
+	define('TYPEKIT_ID', ''); // Typekit ID for JavaScript
+}
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -71,14 +125,6 @@ $table_prefix  = 'wpmm_';
  */
 define('WPLANG', '');
 
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- */
-define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
