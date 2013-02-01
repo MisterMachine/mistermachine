@@ -26,7 +26,7 @@ class Sidegear {
 	 * enviroment() defines Sidegear directory constants
 	 *
 	 */
-	function environment() {	
+	function environment() {
 		define( 'CSS', get_bloginfo('template_directory') . '/assets/css', true );
 		define( 'IMAGES', get_bloginfo('template_directory') . '/assets/img', true );
 		define( 'JS', get_bloginfo('template_directory') . '/assets/js', true );
@@ -67,8 +67,49 @@ class Sidegear {
 				'id' => 'smw-sidebar-right'
 			));
 		}
-
 	}
 
+	function sg_register_post_types(){
+		// Register custom post types
+		if ( function_exists('register_post_type') ) {
+			register_post_type(
+				'project', 
+				array( 'label' => 'Projects', 
+					'description' => 'Projects',
+					'public' => true,
+					'show_ui' => true,
+					'show_in_menu' => true,
+					'capability_type' => 'post',
+					'hierarchical' => false,
+					'rewrite' => array('slug' => 'projects', 'with_front' => false),
+					'query_var' => true,
+					'has_archive' => true,
+					'supports' => array('title',
+						'excerpt',
+						'editor',
+						'trackbacks',
+						'custom-fields',
+						'revisions',
+						'thumbnail',
+						'post-formats'),
+					'taxonomies' => array('category', 'post_tag'),
+					'labels' => array ('name' => 'Projects',
+						'singular_name' => 'Project',
+						'menu_name' => 'Projects',
+						'add_new' => 'Add Project',
+						'add_new_item' => 'Add New Project',
+						'edit' => 'Edit',
+						'edit_item' => 'Edit Project',
+						'new_item' => 'New Project',
+						'view' => 'View Project',
+						'view_item' => 'View Project',
+						'search_items' => 'Search Projects',
+						'not_found' => 'No Projects Found',
+						'not_found_in_trash' => 'No Projects Found in Trash',
+						'parent' => 'Parent Project')
+				)
+			);
+		}
+	}
 }
 ?>
