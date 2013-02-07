@@ -58,8 +58,8 @@ a { font-family: Helvetica, sans-serif; color: #316698; text-decoration: none; /
 /* Global
 ================================================== */
 
-body { font-family: "museo-slab",serif; color: #333; background: #333; }
-	header { overflow: hidden; position: relative; background: #f5f5f3; }
+body { font-family: "museo-slab",serif; }
+	header { overflow: hidden; position: relative; }
 	
 section { width: 100%;  }
 	section article { margin: 0 auto; }
@@ -152,9 +152,9 @@ figure { overflow: hidden; margin: 0; padding: 0; }
 	.sm figure { height: 220px; overflow: hidden; }
 
 /* wide */	
-.wide { background: #333; color: #fff; text-align: center; }
-	.banner { background: url(http://www.imgbase.info/images/safe-wallpapers/digital_art/3d_space_scene/12496_3d_space_scene.jpg) center 0 no-repeat #333; height: 300px; }
-	.feature-wrp { padding: 0; color: #fff; background: url(../img/bg.jpg) #333; overflow: hidden; }
+.wide { color: #fff; text-align: center; }
+	.banner { background: url(http://www.imgbase.info/images/safe-wallpapers/digital_art/3d_space_scene/12496_3d_space_scene.jpg) center 0 no-repeat; height: 300px; }
+	.feature-wrp { padding: 0; color: #fff; background: url(../img/bg.jpg) overflow: hidden; }
 	.feature article { padding-bottom: 25px; }
 	.feature img { float: left; }
 	.feature figure { margin-top: 40px;  overflow: hidden; float: left;

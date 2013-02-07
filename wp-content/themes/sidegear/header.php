@@ -39,9 +39,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 	<div class="page">
-	
+
 		<div class="toolbox">
 			<div class="tools container_12">
 				<div class="account prefix_8 grid_4">
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<header>
 			<div class="hgroup container_12">
 				<div class="logo grid_4">
@@ -64,10 +64,10 @@
 				</nav>
 			</div>
 		</header>
-	
-	<!-- grid reset -->		
-	<div class="messages">
-		<section class="container_12">
-			<p>This is a message from God.</p>
-		</section>
-	</div>
+
+		<!-- grid reset -->
+		<div class="messages">
+			<section class="container_12">
+				<p>This is a message from God.</p>
+			</section>
+		</div>
