@@ -1,0 +1,64 @@
+/* Colors */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.menu a,
+select,
+textarea,
+.base {
+  color: #555e7b;
+  }
+
+.home .site-header a,
+.home .site-header .site-description,
+.home .nav-primary .menu a,
+.home .inverse h1,
+.home .inverse h2,
+.home .inverse h3,
+.home .inverse h4,
+.home .inverse h5,
+.home .inverse h6,
+.home .inverse p,
+.home .inverse a,
+.home .inverse {
+  color: white;
+  }
+
+.btn,
+.btn a,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: white;
+  }
+
+.primary {
+  color: #adc035;
+  }
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #adc035;
+  }
+
+.secondary {
+  color: #b576ad;
+  }
+
+.menu .btn {
+  background-color: #9bcfdd;
+  }
+
+.emphasis {
+  color: #9bcfdd;
+  }
