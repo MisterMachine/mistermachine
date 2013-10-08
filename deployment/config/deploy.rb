@@ -54,9 +54,6 @@ end
 # Custom deployment namespace
 namespace :customs do
     desc "Symlinking files"
-    task :make_symlink, :roles => :app do
-        run "ln -nfs #{shared_path}/uploads #{release_path}/wp-content/uploads"
-    end
     task :update_htaccess, :roles => :app do
       run "rm #{release_path}/.htaccess"
       run "cp #{release_path}/.htaccess-test #{release_path}/.htaccess"
@@ -64,6 +61,5 @@ namespace :customs do
     end
 end
 
-after "deploy:finalize_update", "customs:make_symlink"
 after "deploy:finalize_update","customs:update_htaccess"
 after "deploy", "deploy:cleanup"

@@ -1,0 +1,13 @@
+/* Class Grid based on OOCSS */
+.row,
+footer {
+  width: auto;
+  padding: 0 1.625em;
+  }
+
+.row,
+.lastUnit {
+  overflow: hidden;
+  *overflow: visible;
+  * zoom:1;
+  }

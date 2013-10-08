@@ -1,0 +1,99 @@
+/* Helpers */
+.normal {
+  font-weight: normal;
+  }
+
+.center {
+  text-align: center;
+  }
+
+cite {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.hide {
+  display: none;
+  }
+
+.round img {
+  border-radius: 50%;
+  }
+  
+.unit.right {
+  float: right;
+}
+
+
+/* Clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  }
+
+.clearfix {
+  display: inline-block;
+  }
+
+html[xmlns] .clearfix {
+  display: block;
+  }
+
+* html .clearfix {
+  height: 1%;
+  }
+
+.overflow,
+.site-container {
+  overflow: hidden;
+}
+
+.site-container {
+  width: 100%;
+  position: relative;
+}
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 40em;
+    min-width: 84em;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+body section:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.full-width {
+  padding: 1em;
+}
+
+.silo {
+  margin-bottom: 1em;
+}
+
+.silo p {
+  padding-right: 1em;
+}
+
+.center-articles,
+.center-articles h1,
+.center-articles h2 {
+  text-align: center;
+}

@@ -1,0 +1,115 @@
+/* Headings */
+
+h1,h2,h3,h4,h5,h6,
+.alpha, .beta, .gamma  {
+  font-family: "jubilat", "Merriweather", Georgia, Times, serif;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-top: 0;
+  text-rendering: optimizeLegibility;
+  }
+
+h1,
+.alpha {
+  font-size: 72px;
+  font-size: 3.6rem; /* 36 / 16 = 2.25 */
+  margin-bottom: 0.495em;
+  }
+
+h2,
+.beta {
+  font-size: 30px;
+  font-size: 1.5rem; /* 24 / 16 = 1.5 */
+  margin-bottom: 0.5em;
+  }
+
+h3,
+.gamma {
+  font-size: 22px;
+  font-size: 1.325rem; /* 22 / 16 = 1 */
+  margin-bottom: 0.825em;
+  }
+
+h4,
+.delta {
+  font-size: 18px;
+  font-size: 1.125rem; /* 18 / 16 = .875 */
+  margin-bottom: 1.2375em;
+  }
+
+.menu a,
+h5,
+.epsilon {
+  font-size: 16px;
+  font-size: 1rem; /* 16 / 16 = .75 */
+  margin-bottom: 1.4142857142857141em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141) */
+  }
+
+h6,
+.zeta {
+  font-size: 14px;
+  font-size: .875rem; /* 14 = 16 × .8675 */
+  margin-bottom: 1.65em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65) */
+  }
+
+/* Text */
+
+article p, figcaption {
+  margin: auto auto 1.5em; /* bottom margin for paragraphs */
+  }
+
+article p + article p {
+  text-indent: 1.5em; /* indent subsequent paragraphs */
+  margin-top: -1.5em; /* no top margin on subsequent paragraphs */
+  }
+
+small {
+  font-size: 14px;
+  font-size: .85em;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin: .75em 0;
+  }
+
+.serif {
+  font-family: "ff-tisa-web-pro", "Merriweather", Georgia, Times, serif;
+  }
+
+.sans {
+  font-family: "proxima-nova", "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+
+.strong {
+  font-weight: bold;
+  font-weight: 600;
+  }
+
+.tall {
+  line-height: 1.475em;
+  }
+
+.short {
+  line-height: 1.4em;
+  }
+
+cite {
+  display: block;
+}
+
+/* Anchors */
+a {
+  color: #adc035;
+  text-decoration: none;
+  }
+
+/* Lists */
+
+ol {
+
+  }
+
+li ul,
+li ol,
+dl dd {
+
+  }
