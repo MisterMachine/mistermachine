@@ -5,24 +5,55 @@
     font-size: 18px;
   }
   
-  .full-width {
-    padding: 2em 0;
-  }
+  .panel {
 
+  }
+  
+  .full-width {
+
+  }
+  
+    figure {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  figure img {
+    margin: 0 auto;
+  }
+  
+  
 }
 
 @media only screen and (max-width: 480px) {
+  
+  figure {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  figure img {
+    margin: 0 auto;
+  }
+
+
 
 }
 
 @media only screen and (min-width: 768px) {
 
   html {
-  font-size: 20px;
+    font-size: 18px;
   }
-
-  .full-width {
+  
+  .panel {
     padding: 4em 0;
+  }
+  
+  .full-width {
+
   }
 
   .btn,
@@ -36,13 +67,41 @@
   h1,h2,h3,h4,h5,h6 {
     text-align: left;
   }
+  
+  h1,h2,h3,h4,h5,h6,
+.alpha, .beta, .gamma  {
+  line-height: 1.5em;
+  }
+  
+  h1,
+.alpha {
+  font-size: 72px;
+  font-size: 4rem; /* 36 / 16 = 2.25 */
+  margin-bottom: 0.495em;
+  line-height: 1.2em;
+  }
+
+h2,
+.beta {
+  font-size: 18px;
+  font-size: 1.2rem; /* 24 / 16 = 1.5 */
+  margin-bottom: 0.5em;
+  }
+
+h3,
+.gamma {
+  font-size: 22px;
+  font-size: 1.325rem; /* 22 / 16 = 1 */
+  margin-bottom: 0.825em;
+  }
+
 
   .right-margin {
     margin-right: 1em;
   }
 
   .panel {
-    padding-bottom: 2em;
+
   }
 
   .top {

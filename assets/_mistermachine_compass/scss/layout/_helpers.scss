@@ -80,9 +80,6 @@ body section:nth-child(odd) {
   background-color: #f9f9f9;
 }
 
-.full-width {
-  padding: 1em 0;
-}
 
 .silo {
   margin-bottom: 1em;
@@ -96,4 +93,9 @@ body section:nth-child(odd) {
 .center-articles h1,
 .center-articles h2 {
   text-align: center;
+}
+
+.push {
+  padding-top: 10%;
+  padding-bottom: 10%;
 }

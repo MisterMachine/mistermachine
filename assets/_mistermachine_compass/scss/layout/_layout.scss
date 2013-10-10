@@ -14,18 +14,43 @@
 
 .panel {
   position: relative;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  }
-
-.padding-bottom {
-  padding-bottom: 2em;
+  padding: 2em;
+  overflow: hidden;
 }
 
 .full-width {
-  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.full-width {
+
 }
 
 figure img {
   max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+} 
+
+.panel {
+
+}
+
+.full-width {
+
+}
+
+.hero {
+  max-height: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inner-words {
+  margin: 10%;
 }
