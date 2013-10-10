@@ -434,6 +434,16 @@ footer {
   padding-bottom: 2em;
 }
 
+/* line 25, ../_mistermachine_compass/scss/layout/_layout.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 29, ../_mistermachine_compass/scss/layout/_layout.scss */
+figure img {
+  max-width: 100%;
+}
+
 /* Helpers */
 /* Helpers */
 /* line 2, ../_mistermachine_compass/scss/layout/_helpers.scss */
@@ -531,7 +541,7 @@ body section:nth-child(odd) {
 
 /* line 83, ../_mistermachine_compass/scss/layout/_helpers.scss */
 .full-width {
-  padding: 1em;
+  padding: 1em 0;
 }
 
 /* line 87, ../_mistermachine_compass/scss/layout/_helpers.scss */
@@ -561,7 +571,7 @@ body section:nth-child(odd) {
 
   /* line 8, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .full-width {
-    padding: 2em;
+    padding: 2em 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -572,7 +582,7 @@ body section:nth-child(odd) {
 
   /* line 24, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .full-width {
-    padding: 4em;
+    padding: 4em 0;
   }
 
   /* line 32, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
