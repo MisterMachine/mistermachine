@@ -17,45 +17,45 @@ h1,h2,h3,h4,h5,h6,
 
 h1,
 .alpha {
-  font-size: 28px;
-  font-size: 1.8666rem; /* 36 / 16 = 2.25 */
+  font-size: 26px;
+  font-size: 1.7rem;
   margin-bottom: 0.495em;
   line-height: 1.2em;
   }
 
 h2,
 .beta {
-  font-size: 18px;
-  font-size: 1.2rem; /* 24 / 16 = 1.5 */
+  font-size: 20px;
+  font-size: 1.333rem;
   margin-bottom: 0.5em;
   }
 
 h3,
 .gamma {
-  font-size: 16px;
-  font-size: 1.0666rem; /* 22 / 16 = 1 */
+  font-size: 18px;
+  font-size: 1.2rem;
   margin-bottom: 0.825em;
   }
 
 h4,
 .delta {
-  font-size: 14px;
-  font-size: 1.125rem; /* 18 / 16 = .875 */
+  font-size: 16px;
+  font-size: 1.066rem;
   margin-bottom: 1.2375em;
   }
 
 h5,
 .epsilon {
-  font-size: 14px;
-  font-size: 1rem; /* 16 / 16 = .75 */
-  margin-bottom: 1.4142857142857141em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141) */
+  font-size: 15px;
+  font-size: 1rem; 
+  margin-bottom: 1.4142857142857141em;   
   }
 
 h6,
 .zeta {
   font-size: 14px;
-  font-size: .875rem; /* 14 = 16 × .8675 */
-  margin-bottom: 1.65em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65) */
+  font-size: .875rem; 
+  margin-bottom: 1.65em; 
   }
 
 /* Text */
