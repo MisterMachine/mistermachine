@@ -311,7 +311,7 @@ p,
 select,
 textarea,
 .base {
-  color: #555e7b;
+  color: #333;
 }
 
 /* line 29, ../_mistermachine_compass/scss/globals/_colors.scss */
@@ -367,6 +367,46 @@ input[type="submit"] {
 /* line 62, ../_mistermachine_compass/scss/globals/_colors.scss */
 .emphasis {
   color: #9bcfdd;
+}
+
+/* line 66, ../_mistermachine_compass/scss/globals/_colors.scss */
+.dark {
+  background: #333;
+}
+
+/* line 70, ../_mistermachine_compass/scss/globals/_colors.scss */
+.cyan {
+  background: #00aeef;
+}
+
+/* line 93, ../_mistermachine_compass/scss/globals/_colors.scss */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.cyan h1,
+.cyan h2,
+.cyan h3,
+.cyan h4,
+.cyan h5,
+.cyan h6,
+.cyan p,
+.magenta h1,
+.magenta h2,
+.magenta h3,
+.magenta h4,
+.magenta h5,
+.magenta h6,
+.magenta p {
+  color: #fff;
+}
+
+/* line 97, ../_mistermachine_compass/scss/globals/_colors.scss */
+.magenta {
+  background: #ec008c;
 }
 
 /* Layout */
@@ -554,11 +594,6 @@ img.bg {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-/* line 79, ../_mistermachine_compass/scss/layout/_helpers.scss */
-body section:nth-child(odd) {
-  background-color: #f9f9f9;
 }
 
 /* line 84, ../_mistermachine_compass/scss/layout/_helpers.scss */

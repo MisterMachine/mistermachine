@@ -12,7 +12,7 @@ p,
 select,
 textarea,
 .base {
-  color: #555e7b;
+  color: #333;
   }
 
 .home .site-header a,
@@ -62,3 +62,38 @@ input[type="submit"] {
 .emphasis {
   color: #9bcfdd;
   }
+
+.dark {
+  background: #333;
+}
+
+.cyan {
+  background: #00aeef;
+}
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.cyan h1,
+.cyan h2,
+.cyan h3,
+.cyan h4,
+.cyan h5,
+.cyan h6,
+.cyan p,
+.magenta h1,
+.magenta h2,
+.magenta h3,
+.magenta h4,
+.magenta h5,
+.magenta h6,
+.magenta p {
+  color: #fff;
+}
+
+.magenta {
+  background: #ec008c;
+}
