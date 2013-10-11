@@ -1,4 +1,28 @@
 /* Breakpoints */
+
+@media only screen and (max-width: 480px) {
+  
+  html {
+    font-size: 18px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  figure {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  figure img {
+    margin: 0 auto;
+  }
+
+}
+
+
 @media only screen and (min-width: 480px) {
   
   html {
@@ -22,24 +46,7 @@
   figure img {
     margin: 0 auto;
   }
-  
-  
-}
-
-@media only screen and (max-width: 480px) {
-  
-  figure {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  
-  figure img {
-    margin: 0 auto;
-  }
-
-
-
+ 
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,8 +59,22 @@
     padding: 4em 0;
   }
   
+  .container {
+    padding: 0 50px;
+  }
+  
   .full-width {
 
+  }
+
+  .device-mobile img {
+   border-width: 80px 20px 70px 20px;
+   border-style: solid;
+   border-color: #efefef;
+   
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   border-radius: 30px;  
   }
 
   .btn,
