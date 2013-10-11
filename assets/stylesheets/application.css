@@ -114,8 +114,8 @@ h1, h2, h3, h4, h5, h6,
 /* line 19, ../_mistermachine_compass/scss/globals/_typography.scss */
 h1,
 .alpha {
-  font-size: 30px;
-  font-size: 2rem;
+  font-size: 28px;
+  font-size: 1.8666rem;
   /* 36 / 16 = 2.25 */
   margin-bottom: 0.495em;
   line-height: 1.2em;
@@ -133,8 +133,8 @@ h2,
 /* line 34, ../_mistermachine_compass/scss/globals/_typography.scss */
 h3,
 .gamma {
-  font-size: 22px;
-  font-size: 1.325rem;
+  font-size: 16px;
+  font-size: 1.0666rem;
   /* 22 / 16 = 1 */
   margin-bottom: 0.825em;
 }
@@ -142,7 +142,7 @@ h3,
 /* line 41, ../_mistermachine_compass/scss/globals/_typography.scss */
 h4,
 .delta {
-  font-size: 18px;
+  font-size: 14px;
   font-size: 1.125rem;
   /* 18 / 16 = .875 */
   margin-bottom: 1.2375em;
@@ -151,7 +151,7 @@ h4,
 /* line 48, ../_mistermachine_compass/scss/globals/_typography.scss */
 h5,
 .epsilon {
-  font-size: 16px;
+  font-size: 14px;
   font-size: 1rem;
   /* 16 / 16 = .75 */
   margin-bottom: 1.4142857142857141em;
@@ -478,7 +478,7 @@ footer {
 /* line 15, ../_mistermachine_compass/scss/layout/_layout.scss */
 .panel {
   position: relative;
-  padding: 2em;
+  padding: 2em 1.5em;
   overflow: hidden;
 }
 
@@ -499,27 +499,28 @@ figure img {
   max-width: 1100px;
 }
 
-/* line 47, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 43, ../_mistermachine_compass/scss/layout/_layout.scss */
 .hero {
-  max-height: 800px;
+  max-height: 700px;
   overflow: hidden;
   margin: 0 auto;
+  padding: 0 40px;
   text-align: center;
 }
 
-/* line 54, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 51, ../_mistermachine_compass/scss/layout/_layout.scss */
 .inner-words {
   margin: 10%;
 }
 
-/* line 58, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 55, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo {
   padding-top: 20px;
   padding-bottom: 60px;
   border-right: 1px solid #efefef;
 }
 
-/* line 64, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 61, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo:last-child {
   border-right: 0;
 }
