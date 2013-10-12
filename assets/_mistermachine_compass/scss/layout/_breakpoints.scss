@@ -77,10 +77,18 @@
     padding: 0 40px;
   }
   
+  .bg-logo {
+    background-position: -100px -100px;
+  }
+  
+  .work article.silo {
+    padding-bottom: 100px;
+  }
+  
   .device-screen img {
     border-width: 40px;
    border-style: solid;
-   border-color: #efefef;
+   border-color: #F8F8F8 ;
    
    -webkit-border-radius: 40px;
    -moz-border-radius: 40px;
@@ -94,7 +102,7 @@
   
    border-width: 80px 20px 70px 20px;
    border-style: solid;
-   border-color: #efefef;
+   border-color: #F8F8F8 ;
    
    -webkit-border-radius: 30px;
    -moz-border-radius: 30px;
@@ -104,7 +112,7 @@
   .device-tablet img {
    border-width: 20px 70px 20px 70px;
    border-style: solid;
-   border-color: #efefef;
+   border-color: #F8F8F8;
    
    -webkit-border-radius: 40px;
    -moz-border-radius: 40px;
