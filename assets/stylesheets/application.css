@@ -113,8 +113,8 @@ h1, h2, h3, h4, h5, h6,
 /* line 19, ../_mistermachine_compass/scss/globals/_typography.scss */
 h1,
 .alpha {
-  font-size: 26px;
-  font-size: 1.7rem;
+  font-size: 28px;
+  font-size: 2rem;
   margin-bottom: 1em;
   line-height: 1.2em;
 }
@@ -122,7 +122,7 @@ h1,
 /* line 27, ../_mistermachine_compass/scss/globals/_typography.scss */
 h2,
 .beta {
-  font-size: 20px;
+  font-size: 22px;
   font-size: 1.333rem;
   margin-bottom: 0.5em;
 }
@@ -478,6 +478,11 @@ figure img {
 }
 
 /* line 43, ../_mistermachine_compass/scss/layout/_layout.scss */
+.logo {
+  margin-bottom: 1em;
+}
+
+/* line 47, ../_mistermachine_compass/scss/layout/_layout.scss */
 .hero {
   max-height: 700px;
   overflow: hidden;
@@ -486,17 +491,17 @@ figure img {
   text-align: center;
 }
 
-/* line 51, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 55, ../_mistermachine_compass/scss/layout/_layout.scss */
 .inner-fig {
   margin: 1em 0;
 }
 
-/* line 55, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 59, ../_mistermachine_compass/scss/layout/_layout.scss */
 .inner-words {
   margin: 1em;
 }
 
-/* line 59, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 63, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo {
   padding-top: 20px;
   padding-bottom: 60px;
@@ -504,13 +509,13 @@ nav.silo {
   text-align: center;
 }
 
-/* line 66, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 70, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo img {
   max-width: 100%;
   padding: 0 20px;
 }
 
-/* line 71, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 75, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo:last-child {
   border-right: 0;
 }
@@ -636,11 +641,6 @@ nav.silo p {
 /* Breakpoints */
 /* Breakpoints */
 @media only screen and (max-width: 480px) {
-  /* line 5, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  html {
-    font-size: 16px;
-  }
-
   /* line 9, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   header {
     text-align: center;
@@ -772,8 +772,8 @@ nav.silo p {
   /* line 144, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h2,
   .beta {
-    font-size: 18px;
-    font-size: 1.2rem;
+    font-size: 26px;
+    font-size: 1.5rem;
     /* 24 / 16 = 1.5 */
     margin-bottom: 0.5em;
   }
@@ -782,7 +782,7 @@ nav.silo p {
   h3,
   .gamma {
     font-size: 22px;
-    font-size: 1.325rem;
+    font-size: 1.222rem;
     /* 22 / 16 = 1 */
     margin-bottom: 0.825em;
   }
