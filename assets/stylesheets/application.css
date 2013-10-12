@@ -95,7 +95,7 @@ table {
 /* Headings */
 /* line 3, ../_mistermachine_compass/scss/globals/_typography.scss */
 html {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.625em;
   font-family: 'Open Sans', sans-serif;
 }
@@ -469,7 +469,7 @@ footer {
 /* line 15, ../_mistermachine_compass/scss/layout/_layout.scss */
 .panel {
   position: relative;
-  padding: 2em 1.5em;
+  padding: 2em 1em;
   overflow: hidden;
 }
 
