@@ -362,12 +362,12 @@ input[type="submit"] {
 
 /* line 59, ../_mistermachine_compass/scss/globals/_colors.scss */
 .bg-logo {
-  background: url(../../img/bg-dots.png) 10px -10px no-repeat #00aeef;
+  background: url(../../img/bg-gear.png) -100px -100px no-repeat #00aeef;
 }
 
 /* line 63, ../_mistermachine_compass/scss/globals/_colors.scss */
 .bg-dots {
-  background: url(../../img/bg-gear.png) right -110px no-repeat transparent;
+  background: url(../../img/bg-bulb.png) right bottom no-repeat transparent;
 }
 
 /* line 90, ../_mistermachine_compass/scss/globals/_colors.scss */
