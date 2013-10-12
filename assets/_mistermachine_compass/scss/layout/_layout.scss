@@ -44,18 +44,28 @@ figure img {
   max-height: 700px;
   overflow: hidden;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
   text-align: center;
 }
 
+.inner-fig{
+ margin: 1em 0; 
+}
+
 .inner-words {
-  margin: 10%;
+  margin: 1em;
 }
 
 nav.silo {
   padding-top: 20px;
   padding-bottom: 60px;
   border-right: 1px solid #efefef;
+  text-align: center;
+}
+
+nav.silo img {
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 nav.silo:last-child {

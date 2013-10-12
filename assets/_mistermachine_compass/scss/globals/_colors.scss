@@ -15,21 +15,6 @@ textarea,
   color: #333;
   }
 
-.home .site-header a,
-.home .site-header .site-description,
-.home .nav-primary .menu a,
-.home .inverse h1,
-.home .inverse h2,
-.home .inverse h3,
-.home .inverse h4,
-.home .inverse h5,
-.home .inverse h6,
-.home .inverse p,
-.home .inverse a,
-.home .inverse {
-  color: white;
-  }
-
 .btn,
 .btn a,
 button,
@@ -77,6 +62,7 @@ input[type="submit"] {
 .dark h5,
 .dark h6,
 .dark p,
+.dark a,
 .cyan h1,
 .cyan h2,
 .cyan h3,
@@ -84,13 +70,15 @@ input[type="submit"] {
 .cyan h5,
 .cyan h6,
 .cyan p,
+.cyan a,
 .magenta h1,
 .magenta h2,
 .magenta h3,
 .magenta h4,
 .magenta h5,
 .magenta h6,
-.magenta p {
+.magenta p,
+.magenta a {
   color: #fff;
 }
 
