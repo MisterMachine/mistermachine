@@ -362,10 +362,15 @@ input[type="submit"] {
 
 /* line 59, ../_mistermachine_compass/scss/globals/_colors.scss */
 .bg-logo {
-  background: url(../../img/bg-gear.png) 0 0 no-repeat #00aeef;
+  background: url(../../img/bg-dots.png) 10px -10px no-repeat #00aeef;
 }
 
-/* line 86, ../_mistermachine_compass/scss/globals/_colors.scss */
+/* line 63, ../_mistermachine_compass/scss/globals/_colors.scss */
+.bg-dots {
+  background: url(../../img/bg-gear.png) right -110px no-repeat transparent;
+}
+
+/* line 90, ../_mistermachine_compass/scss/globals/_colors.scss */
 .dark h1,
 .dark h2,
 .dark h3,
@@ -393,7 +398,7 @@ input[type="submit"] {
   color: #fff;
 }
 
-/* line 90, ../_mistermachine_compass/scss/globals/_colors.scss */
+/* line 94, ../_mistermachine_compass/scss/globals/_colors.scss */
 .magenta {
   background: #ec008c;
 }
