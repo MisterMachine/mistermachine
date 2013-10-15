@@ -512,6 +512,11 @@ figure img {
 }
 
 /* line 63, ../_mistermachine_compass/scss/layout/_layout.scss */
+.mobile-only {
+  display: none;
+}
+
+/* line 67, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo {
   padding-top: 20px;
   padding-bottom: 60px;
@@ -519,13 +524,13 @@ nav.silo {
   text-align: center;
 }
 
-/* line 70, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 74, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo img {
   max-width: 100%;
   padding: 0 20px;
 }
 
-/* line 75, ../_mistermachine_compass/scss/layout/_layout.scss */
+/* line 79, ../_mistermachine_compass/scss/layout/_layout.scss */
 nav.silo:last-child {
   border-right: 0;
 }
@@ -659,7 +664,7 @@ nav.silo p {
   /* line 13, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   figure {
     display: block;
-    width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
@@ -667,63 +672,104 @@ nav.silo p {
   figure img {
     margin: 0 auto;
   }
+
+  /* line 23, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .mobile-only {
+    display: block;
+    padding-bottom: 20px !important;
+  }
+
+  /* line 28, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .hide-mobile {
+    display: none;
+  }
+
+  /* line 32, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .work article {
+    padding-bottom: 80px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* line 37, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .work.panel {
+    padding-bottom: 0;
+  }
+
+  /* line 41, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .work .silo {
+    margin-bottom: 0;
+  }
+
+  /* line 47, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .device-screen,
+  .device-tablet,
+  .device-mobile {
+    margin: 0 15px;
+  }
+
+  /* line 54, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  .device-screen img,
+  .device-tablet img,
+  .device-mobile img {
+    border: 1px solid #ccc;
+  }
 }
 @media only screen and (min-width: 480px) {
-  /* line 29, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 62, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   html {
     font-size: 18px;
   }
 
-  /* line 41, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 74, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   figure {
     display: block;
     width: 100%;
     text-align: center;
   }
 
-  /* line 47, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 80, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   figure img {
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 54, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 87, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .tab-center {
     text-align: center;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 61, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 95, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   html {
     font-size: 18px;
   }
 
-  /* line 65, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 99, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .panel {
     padding: 4em 0;
   }
 
-  /* line 69, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 103, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .container {
     padding: 0 50px;
   }
 
-  /* line 77, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 111, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .hero {
     padding: 0 40px;
   }
 
-  /* line 81, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 115, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .bg-logo {
     background-position: -100px -100px;
   }
 
-  /* line 85, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 119, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .work article.silo {
     padding-bottom: 100px;
   }
 
-  /* line 89, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 123, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .device-screen img {
     border-width: 40px;
     border-style: solid;
@@ -733,7 +779,7 @@ nav.silo p {
     border-radius: 40px;
   }
 
-  /* line 100, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 134, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .device-mobile img {
     padding: 0;
     border-width: 80px 20px 70px 20px;
@@ -744,7 +790,7 @@ nav.silo p {
     border-radius: 30px;
   }
 
-  /* line 113, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 147, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .device-tablet img {
     border-width: 20px 70px 20px 70px;
     border-style: solid;
@@ -754,12 +800,12 @@ nav.silo p {
     border-radius: 40px;
   }
 
-  /* line 123, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 157, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .inner-words {
     margin: 10%;
   }
 
-  /* line 131, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 165, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .btn,
   button,
   input[type="button"],
@@ -768,18 +814,18 @@ nav.silo p {
     width: auto;
   }
 
-  /* line 135, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 169, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h1, h2, h3, h4, h5, h6 {
     text-align: left;
   }
 
-  /* line 140, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 174, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h1, h2, h3, h4, h5, h6,
   .alpha, .beta, .gamma {
     line-height: 1.5em;
   }
 
-  /* line 145, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 179, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h1,
   .alpha {
     font-size: 72px;
@@ -789,7 +835,7 @@ nav.silo p {
     line-height: 1.2em;
   }
 
-  /* line 153, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 187, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h2,
   .beta {
     font-size: 26px;
@@ -798,7 +844,7 @@ nav.silo p {
     margin-bottom: 0.5em;
   }
 
-  /* line 160, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 194, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   h3,
   .gamma {
     font-size: 22px;
@@ -807,27 +853,27 @@ nav.silo p {
     margin-bottom: 0.825em;
   }
 
-  /* line 167, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 201, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .right-margin {
     margin-right: 1em;
   }
 
-  /* line 175, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 209, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .top {
     padding-top: 4em;
   }
 
-  /* line 179, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 213, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .right-padding {
     padding-right: 1em;
   }
 
-  /* line 183, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 217, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .align-left {
     float: left;
   }
 
-  /* line 187, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 221, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .row {
     width: 90%;
     margin-left: auto;
@@ -839,67 +885,67 @@ nav.silo p {
     max-width: 64.000em;
   }
 
-  /* line 198, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 232, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .unit {
     float: left;
   }
 
-  /* line 201, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 235, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .unit .inner {
     padding: 0 1em;
   }
 
-  /* line 203, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 237, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size1of1 {
     float: none;
   }
 
-  /* line 204, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 238, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size1of2 {
     width: 50%;
   }
 
-  /* line 205, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 239, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size1of3 {
     width: 33.33333%;
   }
 
-  /* line 206, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 240, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size2of3 {
     width: 66.66666%;
   }
 
-  /* line 207, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 241, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size1of4 {
     width: 25%;
   }
 
-  /* line 208, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 242, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size3of4 {
     width: 75%;
   }
 
-  /* line 209, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 243, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size1of5 {
     width: 20%;
   }
 
-  /* line 210, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 244, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size2of5 {
     width: 40%;
   }
 
-  /* line 211, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 245, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size3of5 {
     width: 60%;
   }
 
-  /* line 212, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 246, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .size4of5 {
     width: 80%;
   }
 
-  /* line 213, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 247, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .lastUnit {
     float: none;
     width: auto;
@@ -908,7 +954,7 @@ nav.silo p {
     _margin-right: -3px;
   }
 
-  /* line 221, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 255, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .nav-primary {
     position: absolute;
     right: 2.5em;
@@ -916,7 +962,7 @@ nav.silo p {
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 230, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 264, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   img.bg {
     /* Set rules to fill background */
     min-height: 60em;
@@ -927,7 +973,7 @@ nav.silo p {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 243, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 277, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
   .nav-primary {
     top: 2em;
   }

@@ -12,7 +12,7 @@
   
   figure {
     display: block;
-    width: 100%;
+    max-width: 100%;
     text-align: center;
   }
   
@@ -20,7 +20,40 @@
     margin: 0 auto;
   }
 
+  .mobile-only {
+    display: block;
+    padding-bottom: 20px !important;
+  }
 
+  .hide-mobile {
+    display: none;
+  }
+  
+  .work article {
+    padding-bottom: 80px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .work.panel {
+    padding-bottom: 0;
+  } 
+  
+  .work .silo {
+    margin-bottom: 0;
+  }
+  
+  .device-screen,
+  .device-tablet, 
+  .device-mobile   {
+    margin: 0 15px;
+    
+  }
+  
+  .device-screen img,
+  .device-tablet img, 
+  .device-mobile img  {
+    border: 1px solid #ccc;
+    }
 }
 
 
@@ -54,6 +87,7 @@
   .tab-center {
     text-align: center;
   }
+  
 }
 
 @media only screen and (min-width: 768px) {
