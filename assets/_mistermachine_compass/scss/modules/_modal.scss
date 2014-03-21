@@ -1,0 +1,65 @@
+// $Modal
+//
+
+.modal-bg {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	
+	height: 100%;
+	width: 100%;
+	
+	top: 0;
+	left: 0;
+	
+	background-color: rgba($darker-color, .8);
+}
+
+.modal {
+	color: $tint-color;
+	position: relative;
+	z-index: 200;
+}
+
+.close {
+	position: absolute;
+	bottom: .5em;
+	left: 1em;
+	@include breakpoint( medium ) {
+		top: 0;
+		right: 1em;
+		
+		bottom: auto;
+		left: auto;
+	}
+}
+
+.overlay-tip {
+	padding: 1em .75em;
+	text-align: center;
+	color: $tint-color;
+
+	
+	background-color: rgba($darker-color, .5);
+	@include border-radius(6px);
+	
+	width: 75%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	
+	@include breakpoint( desktop ) {
+		width: 50%;
+	}
+}
+
+.modal-post {
+	.post {
+		margin-top: 1em;
+		z-index: 200;
+		position: relative;
+	}
+	
+	.shuttle {
+		
+	}
+}

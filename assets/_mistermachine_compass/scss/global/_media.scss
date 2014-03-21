@@ -1,0 +1,34 @@
+// $Media
+//
+
+img, video, object {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	
+	&.no-resize {
+		max-width: none;
+	}
+}
+
+// Maxiumum height
+.squeeze {
+  overflow: hidden;
+  
+  @include breakpoint( medium ) {
+    height: 18em;
+  }
+  
+  @include breakpoint( large ) {
+    height: 19.5em;
+  }
+}
+
+// Circular images
+.round {
+	@include border-radius(50%);
+	overflow: hidden;
+	border-width: 3px;
+	border-color: $dim-color;
+	border-style: solid;
+}

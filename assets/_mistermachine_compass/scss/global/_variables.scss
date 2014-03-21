@@ -1,0 +1,77 @@
+@import "../functions/em_calc";
+@import "../functions/rem_calc";
+
+// $BaseType
+
+$base-font-size: 16px;
+$base-line-height: 26px;
+
+$font-family: 'Gotham SSm A', 'Gotham SSm B', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+$sans-font-family: 'Gotham SSm A', 'Gotham SSm B', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+$serif-font-family: 'Sentinel SSm A', 'Sentinel SSm B', "Georgia", serif; 
+
+// $Brand Colors
+
+$primary-color:     #00baff !default;
+$secondary-color:   #2b3a49 !default;
+$wash-color:        #f8f3e3 !default;
+$tint-color:        #f0ead4 !default;
+$dim-color:       	#cccccc !default;
+$dark-color:  			#9f988d !default;
+$darker-color:			#1e1612	!default;
+
+// $System Colors
+
+$alert-color:       #cf4747 !default;
+$success-color:     #40ae60 !default;
+$warning-color:     #ff9600 !default;
+
+$highlight-color: 	#eea738 !default;
+
+$blank-color:       #ffffff !default;
+$type-color:        #2b3a49 !default;
+$disabled-color:    #bbbbbb !default;
+
+// $Icon Variables
+
+$icon-square:    remCalc( 50px ) !default;
+$icon-path:      "../fonts/";
+
+$control-unit: remCalc(80px) !default;
+
+// $Compass Mixin Defaults
+
+$default-border-radius: 5px;
+$default-box-shadow-color: none;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 0px;
+$default-transition-property: all;
+$default-background-clip: padding-box;
+
+$row-padding: $base-line-height;
+$column-padding: $base-line-height;
+
+// $Breakpoints
+// Change these valuese to desired screen sizes
+
+// small and up
+$small-screen:      emCalc( 480px ) !default; 
+
+// medium and up
+$medium-screen:     emCalc( 768px ) !default;
+
+// medium and up
+$desktop-screen:     emCalc( 960px ) !default;
+
+// large and up
+$large-screen:      emCalc( 1200px ) !default; 
+
+// $Media Queries
+// Used in breakpoint mixin
+
+$screen:            "only screen" !default;
+$small:             "#{$screen} and (min-width: #{$small-screen})" !default;
+$medium:            "#{$screen} and (min-width: #{$medium-screen})" !default;
+$desktop:           "#{$screen} and (min-width: #{$desktop-screen})" !default;
+$large:             "#{$screen} and (min-width: #{$large-screen})" !default;

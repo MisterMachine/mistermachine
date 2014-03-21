@@ -1,16 +1,86 @@
-@charset "UTF-8";
+/*------------------------------------*\
+    $TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES..............................Declarations of Sass variables 
+ * .....Colors
+ * .....Typography
+ * .....Layout
+ * .....Defaults
+ * .....Breakpoints
+ * MIXINS.................................Sass mixins 
+ * RESET..................................Set reset defaults
+ * GLOBAL CLASSES.........................Set reset defaults
+ * GLOBAL ELEMENTS........................Establish global styles
+ * .....Main
+ * .....Headings
+ * .....Text-related elements (p, blockquote, lists)
+ * .....Defaults
+ * .....Breakpoints
+ * TYPOGRAPHY------------------------------
+ * MEDIA------------------------------
+ * LAYOUT------------------------------
+ * NAVIGATION------------------------------
+ * TOC To Be Continued
+ */
 
-/* Compass CSS3 Library */
+@import "global/variables";
+@import "global/reset";
+@import "functions/em_calc";
+@import "functions/rem_calc";
+
+/*------------------------------------*\
+    $COMPASS
+\*------------------------------------*/
+
 @import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "compass/typography/vertical_rhythm";
 
-/* Variables */
-//@import "_variables";
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+@import "mixins/breakpoints";
+@import "mixins/font-smoothing";
+@import "mixins/text-size-adjust";
 
-// =Mixins
-//@import "mixins/all";
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+@import "global/colors";
+@import "global/media";
+@import "global/forms";
+@import "global/helpers";
+@import "global/icons";
 
-/* Globals */
-@import "globals/all";
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+@import "layout/grid";
 
-/* Layout */
-@import "layout/all";
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+@import "layout/align";
+@import "layout/navigation";
+
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+@import "global/typography";
+
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+@import "modules/control";
+@import "modules/pagination";
+@import "modules/post";
+@import "modules/profile";
+@import "modules/visibility";
+@import "modules/modal";
+
+/*------------------------------------*\
+    $VIEWS
+\*------------------------------------*/
+@import "views/patterns";

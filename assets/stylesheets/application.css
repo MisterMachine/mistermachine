@@ -1,13 +1,29 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic,300italic,300);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-/* Compass CSS3 Library */
-/* Variables */
-/* Globals */
-/* Typography */
-/* Import Fonts */
-/* Reset */
-/* Reset */
-/* line 13, ../_mistermachine_compass/scss/globals/_reset.scss */
+/*------------------------------------*\
+    $TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES..............................Declarations of Sass variables 
+ * .....Colors
+ * .....Typography
+ * .....Layout
+ * .....Defaults
+ * .....Breakpoints
+ * MIXINS.................................Sass mixins 
+ * RESET..................................Set reset defaults
+ * GLOBAL CLASSES.........................Set reset defaults
+ * GLOBAL ELEMENTS........................Establish global styles
+ * .....Main
+ * .....Headings
+ * .....Text-related elements (p, blockquote, lists)
+ * .....Defaults
+ * .....Breakpoints
+ * TYPOGRAPHY------------------------------
+ * MEDIA------------------------------
+ * LAYOUT------------------------------
+ * NAVIGATION------------------------------
+ * TOC To Be Continued
+ */
+/* line 19, ../_mistermachine_compass/scss/global/_reset.scss */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -24,21 +40,11 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
   vertical-align: baseline;
   background: transparent;
 }
 
-/* apply a natural box layout model to all elements */
-/* line 24, ../_mistermachine_compass/scss/globals/_reset.scss */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* Add HTML5 elements */
-/* line 39, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 42, ../_mistermachine_compass/scss/global/_reset.scss */
 article,
 aside,
 details,
@@ -53,8 +59,7 @@ summary {
   display: block;
 }
 
-/* Nomarlization */
-/* line 51, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 54, ../_mistermachine_compass/scss/global/_reset.scss */
 body,
 h1,
 h2,
@@ -68,170 +73,110 @@ textarea {
   text-decoration: none;
 }
 
-/* line 55, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 58, ../_mistermachine_compass/scss/global/_reset.scss */
 ul {
   list-style: none;
 }
 
-/* line 58, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 61, ../_mistermachine_compass/scss/global/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 63, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 66, ../_mistermachine_compass/scss/global/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 68, ../_mistermachine_compass/scss/globals/_reset.scss */
+/* line 71, ../_mistermachine_compass/scss/global/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Reset */
-/* Headings */
-/* line 3, ../_mistermachine_compass/scss/globals/_typography.scss */
-html {
-  font-size: 15px;
-  line-height: 1.625em;
-  font-family: 'Open Sans', sans-serif;
+/*------------------------------------*\
+    $COMPASS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+/* line 6, ../_mistermachine_compass/scss/global/_colors.scss */
+.dimmed {
+  background-color: #cccccc;
 }
 
-/* line 10, ../_mistermachine_compass/scss/globals/_typography.scss */
-h1, h2, h3, h4, h5, h6,
-.alpha, .beta, .gamma {
-  font-family: 'Sentinel SSm A', 'Sentinel SSm B', "jubilat", "Merriweather", Georgia, Times, serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  margin-top: 0;
-  text-rendering: optimizeLegibility;
+/* line 8, ../_mistermachine_compass/scss/global/_colors.scss */
+.primary {
+  background-color: #00baff;
+  color: white;
+}
+/* line 12, ../_mistermachine_compass/scss/global/_colors.scss */
+.primary a {
+  color: white;
 }
 
-/* line 19, ../_mistermachine_compass/scss/globals/_typography.scss */
-h1,
-.alpha {
-  font-size: 28px;
-  font-size: 2rem;
-  margin-bottom: 1em;
-  line-height: 1.2em;
+/* line 15, ../_mistermachine_compass/scss/global/_colors.scss */
+.secondary {
+  background-color: #2b3a49;
+  color: white;
+}
+/* line 18, ../_mistermachine_compass/scss/global/_colors.scss */
+.secondary a {
+  color: white;
 }
 
-/* line 27, ../_mistermachine_compass/scss/globals/_typography.scss */
-h2,
-.beta {
-  font-size: 22px;
-  font-size: 1.333rem;
-  margin-bottom: 0.5em;
+/* line 23, ../_mistermachine_compass/scss/global/_colors.scss */
+a.grey {
+  color: #9f988d;
 }
 
-/* line 34, ../_mistermachine_compass/scss/globals/_typography.scss */
-h3,
-.gamma {
-  font-size: 18px;
-  font-size: 1.2rem;
-  margin-bottom: 0.825em;
-}
-
-/* line 41, ../_mistermachine_compass/scss/globals/_typography.scss */
-h4,
-.delta {
-  font-size: 16px;
-  font-size: 1.066rem;
-  margin-bottom: 1.2375em;
-}
-
-/* line 48, ../_mistermachine_compass/scss/globals/_typography.scss */
-h5,
-.epsilon {
-  font-size: 15px;
-  font-size: 1rem;
-  margin-bottom: 1.4142857142857141em;
-}
-
-/* line 55, ../_mistermachine_compass/scss/globals/_typography.scss */
-h6,
-.zeta {
-  font-size: 14px;
-  font-size: .875rem;
-  margin-bottom: 1.65em;
-}
-
-/* Text */
-/* line 63, ../_mistermachine_compass/scss/globals/_typography.scss */
-article p, figcaption {
-  margin: auto auto 1.5em;
-  /* bottom margin for paragraphs */
-}
-
-/* line 67, ../_mistermachine_compass/scss/globals/_typography.scss */
-article p + article p {
-  text-indent: 1.5em;
-  /* indent subsequent paragraphs */
-  margin-top: -1.5em;
-  /* no top margin on subsequent paragraphs */
-}
-
-/* line 72, ../_mistermachine_compass/scss/globals/_typography.scss */
-small {
-  font-size: 14px;
-  font-size: .85em;
-  line-height: 1.2em;
-  font-weight: normal;
-  margin: .75em 0;
-}
-
-/* line 80, ../_mistermachine_compass/scss/globals/_typography.scss */
-.serif {
-  font-family: "ff-tisa-web-pro", "Merriweather", Georgia, Times, serif;
-}
-
-/* line 84, ../_mistermachine_compass/scss/globals/_typography.scss */
-.sans {
-  font-family: "proxima-nova", "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
-}
-
-/* line 88, ../_mistermachine_compass/scss/globals/_typography.scss */
-.strong {
-  font-weight: bold;
-  font-weight: 600;
-}
-
-/* line 93, ../_mistermachine_compass/scss/globals/_typography.scss */
-.tall {
-  line-height: 1.475em;
-}
-
-/* line 97, ../_mistermachine_compass/scss/globals/_typography.scss */
-.short {
-  line-height: 1.4em;
-}
-
-/* line 101, ../_mistermachine_compass/scss/globals/_typography.scss */
-cite {
+/* line 4, ../_mistermachine_compass/scss/global/_media.scss */
+img, video, object {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
-
-/* line 105, ../_mistermachine_compass/scss/globals/_typography.scss */
-em {
-  font-size: .825em;
-  line-height: .5em;
+/* line 9, ../_mistermachine_compass/scss/global/_media.scss */
+img.no-resize, video.no-resize, object.no-resize {
+  max-width: none;
 }
 
-/* Anchors */
-/* line 111, ../_mistermachine_compass/scss/globals/_typography.scss */
-a {
-  color: #333;
-  text-decoration: none;
+/* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+.squeeze {
+  overflow: hidden;
+}
+@media only screen and (min-width: 48em) {
+  /* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+  .squeeze {
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 75em) {
+  /* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+  .squeeze {
+    height: 19.5em;
+  }
 }
 
-/* Lists */
-/* Reset */
-/* Forms */
-/* Input */
-/* line 17, ../_mistermachine_compass/scss/globals/_forms.scss */
+/* line 28, ../_mistermachine_compass/scss/global/_media.scss */
+.round {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border-width: 3px;
+  border-color: #cccccc;
+  border-style: solid;
+}
+
+/* line 25, ../_mistermachine_compass/scss/global/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -246,14 +191,36 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
-  line-height: 2em;
-  padding: 0.5em 0.5em;
+  line-height: 1.5em;
+  padding: .5em .5em .375em;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+}
+/* line 36, ../_mistermachine_compass/scss/global/_forms.scss */
+input[type="text"].is-error,
+input[type="password"].is-error,
+input[type="date"].is-error,
+input[type="datetime"].is-error,
+input[type="datetime-local"].is-error,
+input[type="month"].is-error,
+input[type="week"].is-error,
+input[type="email"].is-error,
+input[type="number"].is-error,
+input[type="search"].is-error,
+input[type="tel"].is-error,
+input[type="time"].is-error,
+input[type="url"].is-error,
+textarea.is-error {
+  border-color: #cf4747;
+  color: #e49898;
 }
 
-/* line 45, ../_mistermachine_compass/scss/globals/_forms.scss */
-.btn,
+/* line 46, ../_mistermachine_compass/scss/global/_forms.scss */
+.button,
 button,
 input,
 select,
@@ -262,719 +229,1624 @@ textarea {
   margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 
-/* line 52, ../_mistermachine_compass/scss/globals/_forms.scss */
+/* line 54, ../_mistermachine_compass/scss/global/_forms.scss */
+textarea {
+  resize: none;
+}
+
+/* line 58, ../_mistermachine_compass/scss/global/_forms.scss */
 label {
-  font-weight: normal !important;
   display: block;
-  margin-bottom: 1rem;
+  margin-top: 0em;
+  padding-top: 0.8125em;
+  padding-bottom: 0.40625em;
+  margin-bottom: 0em;
 }
 
-/* Fieldset */
-/* Buttons */
-/* line 69, ../_mistermachine_compass/scss/globals/_forms.scss */
-.btn a,
-.btn,
+/* line 68, ../_mistermachine_compass/scss/global/_forms.scss */
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 0;
-  padding: 1em 2em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  width: 100%;
-  cursor: pointer;
-  -moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-/* Errors */
-/* Colors */
-/* Colors */
-/* line 14, ../_mistermachine_compass/scss/globals/_colors.scss */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-.menu a,
-select,
-textarea,
-.base {
-  color: #333;
-}
-
-/* line 23, ../_mistermachine_compass/scss/globals/_colors.scss */
-.btn,
-.btn a,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  color: white;
-}
-
-/* line 27, ../_mistermachine_compass/scss/globals/_colors.scss */
-.primary {
-  color: #adc035;
-}
-
-/* line 35, ../_mistermachine_compass/scss/globals/_colors.scss */
-.btn,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background: #adc035;
-}
-
-/* line 39, ../_mistermachine_compass/scss/globals/_colors.scss */
-.secondary {
-  color: #b576ad;
-}
-
-/* line 43, ../_mistermachine_compass/scss/globals/_colors.scss */
-.menu .btn {
-  background-color: #9bcfdd;
-}
-
-/* line 47, ../_mistermachine_compass/scss/globals/_colors.scss */
-.emphasis {
-  color: #9bcfdd;
-}
-
-/* line 51, ../_mistermachine_compass/scss/globals/_colors.scss */
-.dark {
-  background: #333;
-}
-
-/* line 55, ../_mistermachine_compass/scss/globals/_colors.scss */
-.cyan {
-  background: #00aeef;
-}
-
-/* line 59, ../_mistermachine_compass/scss/globals/_colors.scss */
-.bg-logo {
-  background: url(../../img/bg-gear.png) 50% 50% no-repeat #00aeef;
-}
-
-/* line 63, ../_mistermachine_compass/scss/globals/_colors.scss */
-.bg-dots {
-  background: url(../../img/bg-bulb.png) right bottom no-repeat transparent;
-}
-
-/* line 90, ../_mistermachine_compass/scss/globals/_colors.scss */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6,
-.dark p,
-.dark a,
-.cyan h1,
-.cyan h2,
-.cyan h3,
-.cyan h4,
-.cyan h5,
-.cyan h6,
-.cyan p,
-.cyan a,
-.magenta h1,
-.magenta h2,
-.magenta h3,
-.magenta h4,
-.magenta h5,
-.magenta h6,
-.magenta p,
-.magenta a {
-  color: #fff;
-}
-
-/* line 94, ../_mistermachine_compass/scss/globals/_colors.scss */
-.magenta {
-  background: #ec008c;
-}
-
-/* Layout */
-/* Grid */
-/* Class Grid based on OOCSS */
-/* line 3, ../_mistermachine_compass/scss/layout/_grid.scss */
-.row,
-footer {
-  width: auto;
-  padding: 0 1.625em;
-}
-
-/* line 9, ../_mistermachine_compass/scss/layout/_grid.scss */
-.row,
-.lastUnit {
-  overflow: hidden;
-  *overflow: visible;
-  * zoom: 1;
-}
-
-/* Navigation */
-/* Menus */
-/* line 6, ../_mistermachine_compass/scss/layout/_navigation.scss */
-.menu-primary li {
-  display: inline;
-  padding: 1em 1.5em;
-}
-
-/* line 11, ../_mistermachine_compass/scss/layout/_navigation.scss */
-.menu-primary li.btn {
-  padding: 0;
-}
-
-/* line 15, ../_mistermachine_compass/scss/layout/_navigation.scss */
-.menu-primary li.btn a {
-  padding: 1em 1.5em;
-  background-color: #9bcfdd;
-}
-
-/* line 24, ../_mistermachine_compass/scss/layout/_navigation.scss */
-.nav-primary {
-  text-align: center;
-  padding-bottom: 0;
-}
-
-/* Layout */
-/* Layout */
-/* line 3, ../_mistermachine_compass/scss/layout/_layout.scss */
-.no-margin {
-  margin: 0;
-}
-
-/* line 7, ../_mistermachine_compass/scss/layout/_layout.scss */
-.margin-top {
-  margin-top: 1.5em;
-}
-
-/* line 11, ../_mistermachine_compass/scss/layout/_layout.scss */
-.margin-bottom {
-  margin-bottom: 1.5em;
-}
-
-/* line 15, ../_mistermachine_compass/scss/layout/_layout.scss */
-.panel {
-  position: relative;
-  padding: 2em 1em;
-  overflow: hidden;
-}
-
-/* line 21, ../_mistermachine_compass/scss/layout/_layout.scss */
-.full-width {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* line 30, ../_mistermachine_compass/scss/layout/_layout.scss */
-figure img {
-  max-width: 100%;
-}
-
-/* line 34, ../_mistermachine_compass/scss/layout/_layout.scss */
-.container {
-  margin: 0 auto;
-  max-width: 1100px;
-}
-
-/* line 43, ../_mistermachine_compass/scss/layout/_layout.scss */
-.logo {
-  margin-bottom: 1em;
-}
-
-/* line 47, ../_mistermachine_compass/scss/layout/_layout.scss */
-.hero {
-  max-height: 700px;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-
-/* line 55, ../_mistermachine_compass/scss/layout/_layout.scss */
-.inner-fig {
-  margin: 1em 0;
-}
-
-/* line 59, ../_mistermachine_compass/scss/layout/_layout.scss */
-.inner-words {
-  margin: 1em;
-}
-
-/* line 63, ../_mistermachine_compass/scss/layout/_layout.scss */
-.mobile-only {
-  display: none;
-}
-
-/* line 67, ../_mistermachine_compass/scss/layout/_layout.scss */
-nav.silo {
-  padding-top: 20px;
-  padding-bottom: 60px;
-  border-right: 1px solid #efefef;
-  text-align: center;
-}
-
-/* line 74, ../_mistermachine_compass/scss/layout/_layout.scss */
-nav.silo img {
-  max-width: 100%;
-  padding: 0 20px;
-}
-
-/* line 79, ../_mistermachine_compass/scss/layout/_layout.scss */
-nav.silo:last-child {
-  border-right: 0;
-}
-
-/* Helpers */
-/* Helpers */
-/* line 2, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.normal {
-  font-weight: normal;
-}
-
-/* line 6, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.center {
-  text-align: center;
-}
-
-/* line 10, ../_mistermachine_compass/scss/layout/_helpers.scss */
-cite {
-  text-align: right;
-}
-
-/* line 14, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.left {
-  text-align: left;
-}
-
-/* line 18, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.hide {
-  display: none;
-}
-
-/* line 22, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.round img {
-  border-radius: 50%;
-}
-
-/* line 26, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.unit.right {
-  float: right;
-}
-
-/* Clearfix */
-/* line 32, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-/* line 41, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.clearfix {
   display: inline-block;
-}
-
-/* line 45, ../_mistermachine_compass/scss/layout/_helpers.scss */
-html[xmlns] .clearfix {
-  display: block;
-}
-
-/* line 49, ../_mistermachine_compass/scss/layout/_helpers.scss */
-* html .clearfix {
-  height: 1%;
-}
-
-/* line 54, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.overflow,
-.site-container {
-  overflow: hidden;
-}
-
-/* line 58, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.site-container {
-  width: 100%;
-  position: relative;
-}
-
-/* line 63, ../_mistermachine_compass/scss/layout/_helpers.scss */
-img.bg {
-  /* Set rules to fill background */
-  min-height: 40em;
-  min-width: 84em;
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-  /* Set up positioning */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-/* line 84, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.silo {
-  margin-bottom: 1em;
-}
-
-/* line 88, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.silo p {
-  padding-right: 2em;
-}
-
-/* line 92, ../_mistermachine_compass/scss/layout/_helpers.scss */
-nav.silo p {
-  padding: 0 2em;
-}
-
-/* line 98, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.center-articles,
-.center-articles h1,
-.center-articles h2 {
+  overflow: visible;
+  white-space: nowrap;
+  cursor: pointer;
+  *overflow: visible;
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
   text-align: center;
+  line-height: 1.5em;
+  padding: .275em 1em .125em;
+  color: white;
+  background-color: #00baff;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00baff;
+  font-size: 0.8125em;
+  line-height: 2em;
 }
-
-/* line 102, ../_mistermachine_compass/scss/layout/_helpers.scss */
-.push {
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
-
-/* Breakpoints */
-/* Breakpoints */
-@media only screen and (max-width: 480px) {
-  /* line 9, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  header {
-    text-align: center;
-  }
-
-  /* line 13, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  figure {
-    display: block;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  /* line 19, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  figure img {
-    margin: 0 auto;
-  }
-
-  /* line 23, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .mobile-only {
-    display: block;
-    padding-bottom: 20px !important;
-  }
-
-  /* line 28, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .hide-mobile {
-    display: none;
-  }
-
-  /* line 32, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .work article {
-    padding-bottom: 80px;
-    border-bottom: 1px solid #eee;
-  }
-
-  /* line 37, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .work.panel {
-    padding-bottom: 0;
-  }
-
-  /* line 41, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .work .silo {
-    margin-bottom: 0;
-  }
-
-  /* line 47, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .device-screen,
-  .device-tablet,
-  .device-mobile {
-    margin: 0 15px;
-  }
-
-  /* line 54, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .device-screen img,
-  .device-tablet img,
-  .device-mobile img {
-    border: 1px solid #ccc;
-  }
-}
-@media only screen and (min-width: 480px) {
-  /* line 62, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  html {
-    font-size: 18px;
-  }
-
-  /* line 74, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  figure {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* line 80, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  figure img {
-    margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* line 87, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .tab-center {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) {
-  /* line 95, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  html {
-    font-size: 18px;
-  }
-
-  /* line 99, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .panel {
-    padding: 4em 0;
-  }
-
-  /* line 103, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .container {
-    padding: 0 50px;
-  }
-
-  /* line 111, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .hero {
-    padding: 0 40px;
-  }
-
-  /* line 115, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .bg-logo {
-    background-position: -100px -100px;
-  }
-
-  /* line 119, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .work article.silo {
-    padding-bottom: 100px;
-  }
-
-  /* line 123, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .device-screen img {
-    border-width: 40px;
-    border-style: solid;
-    border-color: #f8f8f8;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    border-radius: 40px;
-  }
-
-  /* line 134, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .device-mobile img {
-    padding: 0;
-    border-width: 80px 20px 70px 20px;
-    border-style: solid;
-    border-color: #f8f8f8;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-  }
-
-  /* line 147, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .device-tablet img {
-    border-width: 20px 70px 20px 70px;
-    border-style: solid;
-    border-color: #F8F8F8;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    border-radius: 40px;
-  }
-
-  /* line 157, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .inner-words {
-    margin: 10%;
-  }
-
-  /* line 165, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .btn,
+@media only screen and (min-width: 48em) {
+  /* line 68, ../_mistermachine_compass/scss/global/_forms.scss */
+  .button,
   button,
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
+    font-size: 1em;
+    line-height: 1.625em;
+    padding: .375em 1.5em .275em;
     width: auto;
   }
+}
+/* line 99, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.secondary,
+button.secondary,
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary {
+  background-color: #2b3a49;
+  border-color: #cccccc;
+}
+/* line 103, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.secondary:hover, .button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus,
+input[type="button"].secondary:hover,
+input[type="button"].secondary:focus,
+input[type="reset"].secondary:hover,
+input[type="reset"].secondary:focus,
+input[type="submit"].secondary:hover,
+input[type="submit"].secondary:focus {
+  background-color: #222d39;
+  border-color: #bfbfbf;
+}
+/* line 110, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.value,
+button.value,
+input[type="button"].value,
+input[type="reset"].value,
+input[type="submit"].value {
+  background-color: #0f1419;
+  border-color: #9f988d;
+}
+/* line 114, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.value:hover, .button.value:focus,
+button.value:hover,
+button.value:focus,
+input[type="button"].value:hover,
+input[type="button"].value:focus,
+input[type="reset"].value:hover,
+input[type="reset"].value:focus,
+input[type="submit"].value:hover,
+input[type="submit"].value:focus {
+  background-color: #344759;
+  border-color: #aba59b;
+}
+/* line 121, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.highlight,
+button.highlight,
+input[type="button"].highlight,
+input[type="reset"].highlight,
+input[type="submit"].highlight {
+  background-color: #eea738;
+  border-color: #eea738;
+}
+/* line 125, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.highlight:hover, .button.highlight:focus,
+button.highlight:hover,
+button.highlight:focus,
+input[type="button"].highlight:hover,
+input[type="button"].highlight:focus,
+input[type="reset"].highlight:hover,
+input[type="reset"].highlight:focus,
+input[type="submit"].highlight:hover,
+input[type="submit"].highlight:focus {
+  background-color: #ec9d21;
+  border-color: #ec9d21;
+}
+/* line 132, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.success,
+button.success,
+input[type="button"].success,
+input[type="reset"].success,
+input[type="submit"].success {
+  background-color: #40ae60;
+  border-color: #40ae60;
+}
+/* line 136, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.success:hover, .button.success:focus,
+button.success:hover,
+button.success:focus,
+input[type="button"].success:hover,
+input[type="button"].success:focus,
+input[type="reset"].success:hover,
+input[type="reset"].success:focus,
+input[type="submit"].success:hover,
+input[type="submit"].success:focus {
+  background-color: #399b56;
+  border-color: #399b56;
+}
+/* line 143, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.alert,
+button.alert,
+input[type="button"].alert,
+input[type="reset"].alert,
+input[type="submit"].alert {
+  background-color: #cf4747;
+  border-color: #cf4747;
+}
+/* line 147, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.alert:hover, .button.alert:focus,
+button.alert:hover,
+button.alert:focus,
+input[type="button"].alert:hover,
+input[type="button"].alert:focus,
+input[type="reset"].alert:hover,
+input[type="reset"].alert:focus,
+input[type="submit"].alert:hover,
+input[type="submit"].alert:focus {
+  background-color: #c83434;
+  border-color: #c83434;
+}
+/* line 154, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.warning,
+button.warning,
+input[type="button"].warning,
+input[type="reset"].warning,
+input[type="submit"].warning {
+  background-color: #ff9600;
+  border-color: #ff9600;
+}
+/* line 158, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.warning:hover, .button.warning:focus,
+button.warning:hover,
+button.warning:focus,
+input[type="button"].warning:hover,
+input[type="button"].warning:focus,
+input[type="reset"].warning:hover,
+input[type="reset"].warning:focus,
+input[type="submit"].warning:hover,
+input[type="submit"].warning:focus {
+  background-color: #e68700;
+  border-color: #e68700;
+}
+/* line 165, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.disabled, .button.disabled:hover,
+button.disabled,
+button.disabled:hover,
+input[type="button"].disabled,
+input[type="button"].disabled:hover,
+input[type="reset"].disabled,
+input[type="reset"].disabled:hover,
+input[type="submit"].disabled,
+input[type="submit"].disabled:hover {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+/* line 173, ../_mistermachine_compass/scss/global/_forms.scss */
+.button:hover, .button:focus,
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #00a7e6;
+  border-color: #00a7e6;
+  transition: ease-in-out all .4s;
+  -moz-transition: ease-in-out all .4s;
+  -webkit-transition: ease-in-out all .4s;
+}
+/* line 183, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.inline,
+button.inline,
+input[type="button"].inline,
+input[type="reset"].inline,
+input[type="submit"].inline {
+  margin-right: 1em;
+  padding: .05em 1em;
+}
+/* line 189, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.small,
+button.small,
+input[type="button"].small,
+input[type="reset"].small,
+input[type="submit"].small {
+  font-size: 0.8125em;
+  line-height: 2em;
+  padding: .275em 1em .125em;
+}
+/* line 195, ../_mistermachine_compass/scss/global/_forms.scss */
+.button.big,
+button.big,
+input[type="button"].big,
+input[type="reset"].big,
+input[type="submit"].big {
+  font-size: 1.125em;
+  line-height: 1.44444em;
+  padding: .75em 2em .625em;
+}
 
-  /* line 169, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  h1, h2, h3, h4, h5, h6 {
+/* line 202, ../_mistermachine_compass/scss/global/_forms.scss */
+.button-circle {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding-top: .425em;
+  font-size: 2em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  height: 3.25rem;
+  width: 3.25rem;
+}
+
+/* line 214, ../_mistermachine_compass/scss/global/_forms.scss */
+fieldset {
+  padding: 1em 0;
+  margin-bottom: 26px;
+}
+/* line 218, ../_mistermachine_compass/scss/global/_forms.scss */
+fieldset .note {
+  color: #9f988d;
+  margin-left: 1em;
+}
+
+/* line 4, ../_mistermachine_compass/scss/global/_helpers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 8, ../_mistermachine_compass/scss/global/_helpers.scss */
+.block {
+  display: block;
+}
+
+/* line 12, ../_mistermachine_compass/scss/global/_helpers.scss */
+.inline {
+  display: inline;
+}
+
+/* line 16, ../_mistermachine_compass/scss/global/_helpers.scss */
+.relative {
+  position: relative;
+}
+
+@font-face {
+  font-family: 'n3twork';
+  src: url("../fonts/n3twork.eot?-c69j3f");
+  src: url("../fonts/n3twork.eot?#iefix-c69j3f") format("embedded-opentype"), url("../fonts/n3twork.woff?-c69j3f") format("woff"), url("../fonts/n3twork.ttf?-c69j3f") format("truetype"), url("../fonts/n3twork.svg?-c69j3f#n3twork") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 19, ../_mistermachine_compass/scss/global/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'n3twork';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 34, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-trash:before {
+  content: "\e600";
+}
+
+/* line 37, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-search:before {
+  content: "\e601";
+}
+
+/* line 40, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-camera:before {
+  content: "\e602";
+}
+
+/* line 43, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-layout:before {
+  content: "\e603";
+}
+
+/* line 46, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-more:before {
+  content: "\e604";
+}
+
+/* line 49, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-picture:before {
+  content: "\e605";
+}
+
+/* line 52, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-post:before {
+  content: "\e606";
+}
+
+/* line 55, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-right:before {
+  content: "\e607";
+}
+
+/* line 58, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-rotate:before {
+  content: "\e608";
+}
+
+/* line 61, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-left:before {
+  content: "\e609";
+}
+
+/* line 64, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-upload:before {
+  content: "\e60a";
+}
+
+/* line 67, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-profile:before {
+  content: "\e60b";
+}
+
+/* line 70, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-notify:before {
+  content: "\e60c";
+}
+
+/* line 73, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-link:before {
+  content: "\e60d";
+}
+
+/* line 76, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-heart:before {
+  content: "\e60e";
+}
+
+/* line 79, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-home:before {
+  content: "\e60f";
+}
+
+/* line 82, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-star:before {
+  content: "\e610";
+}
+
+/* line 85, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-comment:before {
+  content: "\e611";
+}
+
+/* line 88, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-close:before {
+  content: "\e612";
+}
+
+/* line 91, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-cart:before {
+  content: "\e613";
+}
+
+/* line 94, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-channels:before {
+  content: "\e614";
+}
+
+/* line 97, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-nav:before {
+  content: "\e615";
+}
+
+/* line 100, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-repost:before {
+  content: "\e616";
+}
+
+/* line 109, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list li, .icon-list-block li {
+  font-weight: normal;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  line-height: 1.875rem;
+  display: inline-block;
+  margin: 0 .25em;
+}
+/* line 117, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list li:last-of-type, .icon-list-block li:last-of-type {
+  margin-right: 0;
+}
+/* line 121, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list li.selected a, .icon-list-block li.selected a {
+  color: #00baff;
+}
+/* line 126, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list a, .icon-list-block a {
+  display: block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #cccccc;
+}
+/* line 131, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list a:hover, .icon-list-block a:hover {
+  color: #00baff;
+}
+/* line 137, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list [class^="icon-"], .icon-list [class*=" icon-"], .icon-list-block [class^="icon-"], .icon-list-block [class*=" icon-"] {
+  float: left;
+  display: block;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  height: 1.875rem;
+  width: 1.875rem;
+  margin-right: .5rem;
+}
+/* line 149, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list:before, .icon-list-block:before {
+  vertical-align: middle;
+}
+
+/* line 156, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list-block li {
+  text-align: center;
+  line-height: 1.25rem;
+}
+/* line 161, ../_mistermachine_compass/scss/global/_icons.scss */
+.icon-list-block [class^="icon-"], .icon-list-block [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: 100%;
+}
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/* line 27, ../_mistermachine_compass/scss/layout/_grid.scss */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 39, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row {
+  width: 100%;
+  padding: 26px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 44, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row.collapse {
+  padding: 0;
+}
+/* line 48, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row.collapse-tall {
+  padding: 0 26px;
+}
+/* line 52, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row.collapse-wide {
+  padding: 26px 0;
+}
+/* line 56, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row.full {
+  padding: 0;
+  max-width: 100%;
+}
+@media only screen and (min-width: 48em) {
+  /* line 39, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .row {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 26px;
+  }
+  /* line 67, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .row.row-wide {
+    max-width: 80em;
+  }
+}
+/* line 72, ../_mistermachine_compass/scss/layout/_grid.scss */
+.row .row {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+/* line 81, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit {
+  float: left;
+  padding: 0 .25em;
+}
+/* line 85, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size1of1 {
+  float: none;
+}
+/* line 86, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size1of2 {
+  width: 50%;
+}
+/* line 87, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size1of3 {
+  width: 33.33333%;
+}
+/* line 88, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size2of3 {
+  width: 66.66666%;
+}
+/* line 89, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size1of4 {
+  width: 25%;
+}
+/* line 90, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size3of4 {
+  width: 75%;
+}
+/* line 91, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size1of5 {
+  width: 20%;
+}
+/* line 92, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size2of5 {
+  width: 40%;
+}
+/* line 93, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size3of5 {
+  width: 60%;
+}
+/* line 94, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit.size4of5 {
+  width: 80%;
+}
+
+/* line 97, ../_mistermachine_compass/scss/layout/_grid.scss */
+.unit-right {
+  float: right;
+}
+
+/* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
+.column {
+  padding: 0 0.5rem;
+}
+/* line 106, ../_mistermachine_compass/scss/layout/_grid.scss */
+.column.centered {
+  padding: 0;
+}
+@media only screen and (min-width: 48em) {
+  /* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column {
+    float: left;
+    padding-bottom: 0;
+  }
+  /* line 113, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size1of1 {
+    float: none;
+  }
+  /* line 114, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size1of2 {
+    width: 50%;
+  }
+  /* line 115, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size1of3 {
+    width: 33.33333%;
+  }
+  /* line 116, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size2of3 {
+    width: 66.66666%;
+  }
+  /* line 117, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size1of4 {
+    width: 25%;
+  }
+  /* line 118, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size3of4 {
+    width: 75%;
+  }
+  /* line 119, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size1of5 {
+    width: 20%;
+  }
+  /* line 120, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size2of5 {
+    width: 40%;
+  }
+  /* line 121, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size3of5 {
+    width: 60%;
+  }
+  /* line 122, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.size4of5 {
+    width: 80%;
+  }
+  /* line 123, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column.right {
+    float: right;
+  }
+}
+
+/* line 131, ../_mistermachine_compass/scss/layout/_grid.scss */
+.panel {
+  padding: 26px;
+}
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+/* line 8, ../_mistermachine_compass/scss/layout/_align.scss */
+.left, .base-left {
+  float: left;
+}
+
+/* line 12, ../_mistermachine_compass/scss/layout/_align.scss */
+.right, .base-right {
+  float: right;
+}
+
+/* line 17, ../_mistermachine_compass/scss/layout/_align.scss */
+.clear {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 21, ../_mistermachine_compass/scss/layout/_align.scss */
+.overflow {
+  overflow: hidden;
+}
+
+/* line 25, ../_mistermachine_compass/scss/layout/_align.scss */
+.medium-text-left {
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 31, ../_mistermachine_compass/scss/layout/_align.scss */
+  .medium-text-left {
     text-align: left;
   }
 
-  /* line 174, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  h1, h2, h3, h4, h5, h6,
-  .alpha, .beta, .gamma {
-    line-height: 1.5em;
+  /* line 35, ../_mistermachine_compass/scss/layout/_align.scss */
+  .base-left, .base-right {
+    float: none;
   }
 
-  /* line 179, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+  /* line 40, ../_mistermachine_compass/scss/layout/_align.scss */
+  .medium-left {
+    float: left;
+  }
+
+  /* line 44, ../_mistermachine_compass/scss/layout/_align.scss */
+  .medium-right {
+    float: right;
+  }
+
+  /* line 49, ../_mistermachine_compass/scss/layout/_align.scss */
+  .top-left, .top-right, .bottom-left, .bottom-right, .middle-left, .middle-right {
+    position: absolute;
+  }
+
+  /* line 53, ../_mistermachine_compass/scss/layout/_align.scss */
+  .top-left, .top-right {
+    top: 26px;
+  }
+
+  /* line 57, ../_mistermachine_compass/scss/layout/_align.scss */
+  .top-left {
+    left: 26px;
+  }
+
+  /* line 61, ../_mistermachine_compass/scss/layout/_align.scss */
+  .top-right {
+    right: 26px;
+  }
+
+  /* line 65, ../_mistermachine_compass/scss/layout/_align.scss */
+  .bottom-left, .bottom-right {
+    bottom: 26px;
+  }
+
+  /* line 69, ../_mistermachine_compass/scss/layout/_align.scss */
+  .bottom-left {
+    left: 26px;
+  }
+
+  /* line 73, ../_mistermachine_compass/scss/layout/_align.scss */
+  .bottom-right {
+    right: 26px;
+  }
+
+  /* line 77, ../_mistermachine_compass/scss/layout/_align.scss */
+  .middle-left, .middle-right {
+    top: 50%;
+  }
+
+  /* line 81, ../_mistermachine_compass/scss/layout/_align.scss */
+  .middle-left {
+    left: 26px;
+  }
+
+  /* line 85, ../_mistermachine_compass/scss/layout/_align.scss */
+  .middle-right {
+    right: 26px;
+  }
+}
+/* line 92, ../_mistermachine_compass/scss/layout/_align.scss */
+.inline-list li {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+/* line 99, ../_mistermachine_compass/scss/layout/_align.scss */
+.centered {
+  float: none !important;
+  margin: 0 auto;
+}
+/* line 103, ../_mistermachine_compass/scss/layout/_align.scss */
+.centered img {
+  display: inline;
+}
+
+/* line 10, ../_mistermachine_compass/scss/layout/_navigation.scss */
+a.menu-link {
+  float: right;
+  display: block;
+  padding: 1.125em;
+  vertical-align: middle;
+  z-index: 200;
+  position: relative;
+  background: #182129;
+}
+
+/* line 27, ../_mistermachine_compass/scss/layout/_navigation.scss */
+nav[role=navigation] {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 34, ../_mistermachine_compass/scss/layout/_navigation.scss */
+nav[role=navigation].active {
+  max-height: 15em;
+}
+/* line 38, ../_mistermachine_compass/scss/layout/_navigation.scss */
+nav[role=navigation] ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 43, ../_mistermachine_compass/scss/layout/_navigation.scss */
+nav[role=navigation] li {
+  display: block;
+  max-height: 5rem;
+  overflow: hidden;
+}
+/* line 48, ../_mistermachine_compass/scss/layout/_navigation.scss */
+nav[role=navigation] li a {
+  font-size: 1em;
+  line-height: 1.625em;
+  display: block;
+  padding: 0 1.125em;
+  line-height: 5rem;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@media only screen and (min-width: 60em) {
+  /* line 65, ../_mistermachine_compass/scss/layout/_navigation.scss */
+  a.menu-link {
+    float: none;
+    display: none;
+  }
+
+  /* line 71, ../_mistermachine_compass/scss/layout/_navigation.scss */
+  .control {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+  }
+
+  /* line 82, ../_mistermachine_compass/scss/layout/_navigation.scss */
+  nav[role=navigation] {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
+  /* line 89, ../_mistermachine_compass/scss/layout/_navigation.scss */
+  nav[role=navigation] li {
+    display: inline-block;
+    margin: 0;
+  }
+  /* line 93, ../_mistermachine_compass/scss/layout/_navigation.scss */
+  nav[role=navigation] li a {
+    float: left;
+    border: 0;
+  }
+}
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+/* line 30, ../_mistermachine_compass/scss/global/_typography.scss */
+html {
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 61, ../../../../.rvm/rubies/ruby-2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html * html {
+  font-size: 100%;
+}
+/* line 64, ../../../../.rvm/rubies/ruby-2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html html {
+  font-size: 16px;
+  line-height: 1.625rem;
+}
+
+/* line 35, ../_mistermachine_compass/scss/global/_typography.scss */
+body {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+/* line 42, ../_mistermachine_compass/scss/global/_typography.scss */
+h1,
+.alpha, h2,
+.beta, h3,
+.gamma, h4,
+.delta, h5,
+.epsilon, h6,
+.zeta {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Georgia", serif;
+  text-rendering: optimizeLegibility;
+  display: block;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 50, ../_mistermachine_compass/scss/global/_typography.scss */
+h1.normal,
+.normal.alpha, h2.normal,
+.normal.beta, h3.normal,
+.normal.gamma, h4.normal,
+.normal.delta, h5.normal,
+.normal.epsilon, h6.normal,
+.normal.zeta {
+  font-weight: 500;
+}
+/* line 54, ../_mistermachine_compass/scss/global/_typography.scss */
+h1 [class^="icon-"],
+.alpha [class^="icon-"], h2 [class^="icon-"],
+.beta [class^="icon-"], h3 [class^="icon-"],
+.gamma [class^="icon-"], h4 [class^="icon-"],
+.delta [class^="icon-"], h5 [class^="icon-"],
+.epsilon [class^="icon-"], h6 [class^="icon-"],
+.zeta [class^="icon-"], h1 [class*=" icon-"],
+.alpha [class*=" icon-"], h2 [class*=" icon-"],
+.beta [class*=" icon-"], h3 [class*=" icon-"],
+.gamma [class*=" icon-"], h4 [class*=" icon-"],
+.delta [class*=" icon-"], h5 [class*=" icon-"],
+.epsilon [class*=" icon-"], h6 [class*=" icon-"],
+.zeta [class*=" icon-"] {
+  margin-right: .25em;
+}
+
+/* line 60, ../_mistermachine_compass/scss/global/_typography.scss */
+.rhythm {
+  margin-bottom: 1.625rem;
+}
+
+/* line 66, ../_mistermachine_compass/scss/global/_typography.scss */
+h1,
+.alpha {
+  font-size: 2.125rem;
+  line-height: 3.25rem;
+  line-height: 2.03125rem;
+  margin-top: 1.625rem;
+  padding-top: 1.625rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 48em) {
+  /* line 66, ../_mistermachine_compass/scss/global/_typography.scss */
   h1,
   .alpha {
-    font-size: 72px;
-    font-size: 4rem;
-    /* 36 / 16 = 2.25 */
-    margin-bottom: 0.495em;
-    line-height: 1.2em;
+    font-size: 5.125rem;
+    line-height: 6.5rem;
+    line-height: 4.875rem;
+    letter-spacing: -2px;
   }
+}
 
-  /* line 187, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+/* line 81, ../_mistermachine_compass/scss/global/_typography.scss */
+h2,
+.beta {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 48em) {
+  /* line 81, ../_mistermachine_compass/scss/global/_typography.scss */
   h2,
   .beta {
-    font-size: 26px;
-    font-size: 1.5rem;
-    /* 24 / 16 = 1.5 */
-    margin-bottom: 0.5em;
+    font-size: 1.875rem;
+    line-height: 3.25rem;
+    letter-spacing: -1px;
   }
+}
 
-  /* line 194, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
+/* line 93, ../_mistermachine_compass/scss/global/_typography.scss */
+h3,
+.gamma {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  line-height: 2.03125rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 48em) {
+  /* line 93, ../_mistermachine_compass/scss/global/_typography.scss */
   h3,
   .gamma {
-    font-size: 22px;
-    font-size: 1.222rem;
-    /* 22 / 16 = 1 */
-    margin-bottom: 0.825em;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+    line-height: 2.15312rem;
+    letter-spacing: 0;
+  }
+}
+
+/* line 108, ../_mistermachine_compass/scss/global/_typography.scss */
+h4,
+.delta {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  line-height: 1.625rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+}
+@media only screen and (min-width: 48em) {
+  /* line 108, ../_mistermachine_compass/scss/global/_typography.scss */
+  h4,
+  .delta {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+/* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
+h5,
+.epsilon {
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+}
+@media only screen and (min-width: 48em) {
+  /* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
+  h5,
+  .epsilon {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+/* line 130, ../_mistermachine_compass/scss/global/_typography.scss */
+h6,
+.zeta {
+  font-size: 0.75rem;
+  line-height: 1.625rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+}
+@media only screen and (min-width: 48em) {
+  /* line 130, ../_mistermachine_compass/scss/global/_typography.scss */
+  h6,
+  .zeta {
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+  }
+}
+
+/* line 139, ../_mistermachine_compass/scss/global/_typography.scss */
+p {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+}
+
+/* line 143, ../_mistermachine_compass/scss/global/_typography.scss */
+span {
+  margin-bottom: 0;
+}
+
+/* line 149, ../_mistermachine_compass/scss/global/_typography.scss */
+a {
+  text-decoration: none;
+  color: #2b3a49;
+}
+
+/* line 154, ../_mistermachine_compass/scss/global/_typography.scss */
+.small {
+  font-size: 0.75rem;
+  line-height: 1.625rem;
+  line-height: 1em;
+  text-transform: none;
+}
+
+/* line 160, ../_mistermachine_compass/scss/global/_typography.scss */
+small {
+  color: #9f988d;
+}
+
+/* line 164, ../_mistermachine_compass/scss/global/_typography.scss */
+.sans {
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 168, ../_mistermachine_compass/scss/global/_typography.scss */
+.serif {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Georgia", serif;
+}
+
+/* line 172, ../_mistermachine_compass/scss/global/_typography.scss */
+.caps {
+  text-transform: uppercase;
+}
+
+/* line 176, ../_mistermachine_compass/scss/global/_typography.scss */
+.normal {
+  font-weight: normal;
+}
+
+/* line 180, ../_mistermachine_compass/scss/global/_typography.scss */
+.alignleft {
+  text-align: left;
+}
+
+/* line 184, ../_mistermachine_compass/scss/global/_typography.scss */
+.alignright {
+  text-align: right;
+}
+
+/* line 188, ../_mistermachine_compass/scss/global/_typography.scss */
+.no-margin {
+  margin-bottom: 0;
+}
+
+/* line 192, ../_mistermachine_compass/scss/global/_typography.scss */
+nav li {
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+/* line 6, ../_mistermachine_compass/scss/modules/_control.scss */
+.control {
+  margin-bottom: 52px;
+}
+/* line 9, ../_mistermachine_compass/scss/modules/_control.scss */
+.control .logo {
+  display: block;
+  background: #00baff;
+  height: 5rem;
+  line-height: 5rem;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 20, ../_mistermachine_compass/scss/modules/_control.scss */
+.control .logo img {
+  position: absolute;
+  top: 0.875em;
+  left: 0.875em;
+  height: 2.5rem;
+}
+/* line 28, ../_mistermachine_compass/scss/modules/_control.scss */
+.control a {
+  color: white;
+}
+
+/* line 4, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle {
+  display: block;
+}
+/* line 7, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .arrow {
+  display: block;
+  position: absolute;
+  height: 2.625rem;
+  width: 2.625rem;
+  line-height: 2.625rem;
+  text-align: center;
+  color: #1e1612;
+  transition: ease-in-out all .4s;
+  -moz-transition: ease-in-out all .4s;
+  -webkit-transition: ease-in-out all .4s;
+}
+/* line 23, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .arrow:hover {
+  color: #00baff;
+}
+/* line 25, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .arrow span {
+  font-size: 2em;
+  line-height: 2.625rem;
+}
+/* line 32, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .left-arrow, .shuttle .right-arrow {
+  top: 50%;
+  z-index: 200;
+}
+/* line 37, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .left-arrow {
+  left: 1em;
+}
+/* line 41, ../_mistermachine_compass/scss/modules/_pagination.scss */
+.shuttle .right-arrow {
+  right: 1em;
+}
+
+/* line 8, ../_mistermachine_compass/scss/modules/_post.scss */
+.post {
+  background-color: #f8f3e3;
+  -webkit-box-shadow: 0 1px 2px rgba(159, 152, 141, 0.275);
+  -moz-box-shadow: 0 1px 2px rgba(159, 152, 141, 0.275);
+  box-shadow: 0 1px 2px rgba(159, 152, 141, 0.275);
+  margin-bottom: .75em;
+}
+/* line 13, ../_mistermachine_compass/scss/modules/_post.scss */
+.post h2 a {
+  color: #00baff;
+}
+/* line 17, ../_mistermachine_compass/scss/modules/_post.scss */
+.post [class*='post-'] {
+  padding: .5em 1em;
+}
+/* line 22, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-header {
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: .5em;
+}
+/* line 25, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-header h2 {
+  margin-top: .625em;
+  margin-bottom: 0;
+}
+/* line 30, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-header .avatar {
+  margin-right: .5em;
+  display: block;
+}
+/* line 35, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-header h3, .post .post-header .meta {
+  color: #9f988d;
+}
+/* line 41, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-article {
+  padding-top: 1em;
+}
+/* line 46, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-repost {
+  color: #9f988d;
+  padding: .75em 1em;
+}
+/* line 50, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-repost h2 {
+  margin-top: .275em;
+}
+/* line 54, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-repost .normal {
+  font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 60, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure {
+  padding: 0;
+  position: relative;
+}
+/* line 64, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 69, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure .corner {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 3.4375em;
+  height: 3.4375em;
+  color: #f0ead4;
+}
+/* line 82, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure .corner .angle-right {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 55px 55px;
+  border-color: transparent transparent #2b3a49 transparent;
+}
+/* line 89, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure .corner .angle-right.angle-buy {
+  border-color: transparent transparent #40ae60 transparent;
+}
+/* line 94, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-figure .corner [class^="icon-"], .post .post-figure .corner [class*=" icon-"] {
+  line-height: 1.875em;
+  position: absolute;
+  bottom: 0;
+  right: .25em;
+  z-index: 200;
+}
+/* line 105, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-footer {
+  padding-top: 0;
+  color: #9f988d;
+}
+/* line 109, ../_mistermachine_compass/scss/modules/_post.scss */
+.post .post-footer li {
+  line-height: 1.25em;
+}
+
+/* line 4, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  min-height: 6.25em;
+}
+@media only screen and (min-width: 48em) {
+  /* line 4, ../_mistermachine_compass/scss/modules/_profile.scss */
+  .profile {
+    min-height: 12.5em;
+  }
+}
+/* line 13, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile.border-bottom {
+  border-bottom-width: 6px;
+  border-bottom-color: #cccccc;
+  border-style: solid;
+}
+/* line 21, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile .avatar img {
+  border-width: 6px;
+}
+/* line 23, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile .avatar img.left {
+  margin-right: 1em;
+}
+/* line 30, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile .stats {
+  margin-top: 1em;
+}
+/* line 32, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile .stats li {
+  display: inline-block;
+  margin: 0 1em;
+}
+/* line 39, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile h1, .profile h2, .profile h3, .profile h4, .profile h5, .profile h6, .profile p, .profile span, .profile a {
+  text-shadow: 2px 2px 4px rgba(43, 58, 73, 0.6);
+  color: #f8f3e3;
+}
+/* line 45, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile hgroup {
+  margin-bottom: 1em;
+}
+/* line 49, ../_mistermachine_compass/scss/modules/_profile.scss */
+.profile .valign {
+  padding: 5% 0;
+  margin-bottom: 0;
+}
+
+/* line 56, ../_mistermachine_compass/scss/modules/_profile.scss */
+.stat-bar {
+  margin: .5em 0;
+}
+/* line 58, ../_mistermachine_compass/scss/modules/_profile.scss */
+.stat-bar li {
+  margin-right: 2em;
+}
+/* line 62, ../_mistermachine_compass/scss/modules/_profile.scss */
+.stat-bar .count {
+  line-height: 0.75em;
+  padding-top: .5em;
+}
+
+/* line 69, ../_mistermachine_compass/scss/modules/_profile.scss */
+.message-bar {
+  padding: 1em 0;
+}
+/* line 72, ../_mistermachine_compass/scss/modules/_profile.scss */
+.message-bar .message {
+  line-height: 2.5em;
+  padding-right: 1em;
+}
+
+/* line 7, ../_mistermachine_compass/scss/modules/_visibility.scss */
+.hide,
+.hide-base,
+.show-medium {
+  display: none;
+}
+
+@media only screen and (min-width: 30em) {
+  /* line 12, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .hide-base {
+    display: block;
   }
 
-  /* line 201, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .right-margin {
-    margin-right: 1em;
+  /* line 17, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .hide-small {
+    display: none;
+  }
+}
+@media only screen and (min-width: 48em) {
+  /* line 24, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .show-medium {
+    display: block;
   }
 
-  /* line 209, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .top {
-    padding-top: 4em;
+  /* line 28, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .hide-medium {
+    display: none;
   }
-
-  /* line 213, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .right-padding {
-    padding-right: 1em;
+}
+@media only screen and (min-width: 60em) {
+  /* line 35, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .hide-desktop {
+    display: none;
   }
-
-  /* line 217, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .align-left {
-    float: left;
+}
+@media only screen and (min-width: 75em) {
+  /* line 42, ../_mistermachine_compass/scss/modules/_visibility.scss */
+  .hide-large {
+    display: none;
   }
+}
+/* line 4, ../_mistermachine_compass/scss/modules/_modal.scss */
+.modal-bg {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(30, 22, 18, 0.8);
+}
 
-  /* line 221, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .row {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: .3125em;
-    padding-right: .3125em;
-    max-width: 64.000em;
+/* line 18, ../_mistermachine_compass/scss/modules/_modal.scss */
+.modal {
+  color: #f0ead4;
+  position: relative;
+  z-index: 200;
+}
+
+/* line 24, ../_mistermachine_compass/scss/modules/_modal.scss */
+.close {
+  position: absolute;
+  bottom: .5em;
+  left: 1em;
+}
+@media only screen and (min-width: 48em) {
+  /* line 24, ../_mistermachine_compass/scss/modules/_modal.scss */
+  .close {
+    top: 0;
+    right: 1em;
+    bottom: auto;
+    left: auto;
   }
+}
 
-  /* line 232, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .unit {
-    float: left;
-  }
-
-  /* line 235, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .unit .inner {
-    padding: 0 1em;
-  }
-
-  /* line 237, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size1of1 {
-    float: none;
-  }
-
-  /* line 238, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size1of2 {
+/* line 37, ../_mistermachine_compass/scss/modules/_modal.scss */
+.overlay-tip {
+  padding: 1em .75em;
+  text-align: center;
+  color: #f0ead4;
+  background-color: rgba(30, 22, 18, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 60em) {
+  /* line 37, ../_mistermachine_compass/scss/modules/_modal.scss */
+  .overlay-tip {
     width: 50%;
   }
+}
 
-  /* line 239, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size1of3 {
-    width: 33.33333%;
-  }
+/* line 56, ../_mistermachine_compass/scss/modules/_modal.scss */
+.modal-post .post {
+  margin-top: 1em;
+  z-index: 200;
+  position: relative;
+}
 
-  /* line 240, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size2of3 {
-    width: 66.66666%;
-  }
+/*------------------------------------*\
+    $VIEWS
+\*------------------------------------*/
+/* line 6, ../_mistermachine_compass/scss/views/_patterns.scss */
+.hero {
+  padding-bottom: 52px;
+}
 
-  /* line 241, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size1of4 {
-    width: 25%;
-  }
-
-  /* line 242, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size3of4 {
-    width: 75%;
-  }
-
-  /* line 243, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size1of5 {
-    width: 20%;
-  }
-
-  /* line 244, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size2of5 {
-    width: 40%;
-  }
-
-  /* line 245, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size3of5 {
-    width: 60%;
-  }
-
-  /* line 246, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .size4of5 {
-    width: 80%;
-  }
-
-  /* line 247, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .lastUnit {
-    float: none;
-    width: auto;
-    _position: relative;
-    _left: -3px;
-    _margin-right: -3px;
-  }
-
-  /* line 255, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .nav-primary {
-    position: absolute;
-    right: 2.5em;
-    top: 4.5em;
+/* line 11, ../_mistermachine_compass/scss/views/_patterns.scss */
+.process .silo {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+@media only screen and (min-width: 48em) {
+  /* line 11, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .process .silo {
+    max-width: 51.25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.625rem;
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+    margin-bottom: 1.625rem;
   }
 }
-@media only screen and (max-width: 768px) {
-  /* line 264, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  img.bg {
-    /* Set rules to fill background */
-    min-height: 60em;
-    min-width: 125em;
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
+/* line 21, ../_mistermachine_compass/scss/views/_patterns.scss */
+.process h2 {
+  padding-top: 26px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 21, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .process h2 {
+    padding-top: 78px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  /* line 277, ../_mistermachine_compass/scss/layout/_breakpoints.scss */
-  .nav-primary {
-    top: 2em;
+
+/* line 30, ../_mistermachine_compass/scss/views/_patterns.scss */
+.services .silo {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+@media only screen and (min-width: 48em) {
+  /* line 30, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .services .silo {
+    max-width: 51.25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.625rem;
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+    margin-bottom: 1.625rem;
   }
+}
+/* line 40, ../_mistermachine_compass/scss/views/_patterns.scss */
+.services h2 {
+  padding-top: 26px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 40, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .services h2 {
+    padding-top: 78px;
+  }
+}
+
+/* line 48, ../_mistermachine_compass/scss/views/_patterns.scss */
+.slide.row {
+  margin-bottom: 52px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 56, ../_mistermachine_compass/scss/views/_patterns.scss */
+.device-screen,
+.device-mobile,
+.device-tablet {
+  border: 0;
+}
+/* line 59, ../_mistermachine_compass/scss/views/_patterns.scss */
+.device-screen img,
+.device-mobile img,
+.device-tablet img {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 70, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .device-screen {
+    border-width: 2.5em 1px 1px 1px;
+    border-style: solid;
+    border-color: #2b3a49;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  /* line 77, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .device-mobile {
+    border-width: 4em .5em 4em .5em;
+    border-style: solid;
+    border-color: #2b3a49;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  /* line 84, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .device-tablet {
+    border-width: .5em 4em;
+    border-style: solid;
+    border-color: #2b3a49;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  /* line 94, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .device-screen img,
+  .device-mobile img,
+  .device-tablet img {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+/* line 101, ../_mistermachine_compass/scss/views/_patterns.scss */
+nav img {
+  margin-left: auto;
+  margin-right: auto;
 }

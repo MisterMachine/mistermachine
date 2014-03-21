@@ -1,0 +1,222 @@
+// $Form Elements
+//
+// Inputs styles
+// Buttons: 
+// Colors: Secondary, Value, Highlight, Success, ALert, Warning
+// Sizes: Small, Big
+//
+
+@import "compass/typography/vertical_rhythm";
+
+// Input global styles
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  font-family: $sans-font-family;
+  width: 100%;
+  line-height: 1.5em;
+  padding: .5em .5em .375em;
+  
+  border-color: $dim-color;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+
+	&.is-error {
+		border-color: $alert-color;
+		color: lighten($alert-color, 20%);
+	}
+}
+
+.button,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  @include border-radius(6px);
+}
+
+textarea {
+	 resize: none;
+}
+
+label {
+	display: block;
+	@include rhythm(0, .5, .25, 0);
+}
+
+// Buttons
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  overflow: visible;
+  white-space:nowrap;
+
+  cursor: pointer;
+  *overflow: visible;
+  font-family: $sans-font-family;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  
+  line-height: 1.5em;
+  padding: .275em 1em .125em;
+  
+	color: $blank-color;
+  background-color: $primary-color;
+  
+  border-style: solid;
+  border-width: 2px;
+  border-color: $primary-color;
+  @include adjust-font-size-to(13px);
+    
+  @include breakpoint( medium ) {
+    @include adjust-font-size-to(16px);
+    padding: .375em 1.5em .275em;
+    //display: inline;
+    width: auto;
+  }
+  
+  // Secondary button colors
+  &.secondary {
+		background-color: $secondary-color;
+		border-color: $dim-color;
+		
+		&:hover, &:focus {
+			background-color: darken($secondary-color, 5%);
+			border-color: darken($dim-color, 5%);
+		}
+  }
+  
+  // Value button colors
+  &.value {
+		background-color: darken($secondary-color, 15%);
+		border-color: $dark-color;
+		
+		&:hover, &:focus {
+			background-color: lighten($secondary-color, 5%);
+			border-color: lighten($dark-color, 5%);
+		}
+  }
+  
+  // Highlight button colors
+  &.highlight {
+		background-color: $highlight-color;
+		border-color: $highlight-color;
+		
+		&:hover, &:focus {
+			background-color: darken($highlight-color, 5%);
+			border-color: darken($highlight-color, 5%);
+		}
+  }
+  
+  // Success button colors
+  &.success {
+		background-color: $success-color;
+		border-color: $success-color;
+		
+		&:hover, &:focus {
+			background-color: darken($success-color, 5%);
+			border-color: darken($success-color, 5%);
+		}
+  }
+  
+  // Alert button colors
+  &.alert {
+		background-color: $alert-color;
+		border-color: $alert-color;
+		
+		&:hover, &:focus {
+			background-color: darken($alert-color, 5%);
+			border-color: darken($alert-color, 5%);
+		}
+  }
+  
+  // Warning button colors
+  &.warning {
+		background-color: $warning-color;
+		border-color: $warning-color;
+		
+		&:hover, &:focus {
+			background-color: darken($warning-color, 5%);
+			border-color: darken($warning-color, 5%);
+		}
+  }
+  
+  // Disabled button colors and state
+  &.disabled, &.disabled:hover {
+		background-color: $dim-color;
+		border-color: $dim-color;
+		color: rgba($blank-color, .5);
+		cursor: default;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: darken($primary-color, 5%);
+    border-color: darken($primary-color, 5%);
+    
+    transition: ease-in-out all .4s; 
+    -moz-transition: ease-in-out all .4s;
+    -webkit-transition: ease-in-out all .4s;
+  }
+  
+  // Inline display
+  &.inline {
+	  margin-right: 1em;
+	  padding: .05em 1em;
+  }
+  
+  // Smaller size
+  &.small {
+	  @include adjust-font-size-to(13px);
+	  padding: .275em 1em .125em;
+  }
+  
+  // Bigger size
+  &.big {
+	  @include adjust-font-size-to(18px);
+	  padding: .75em 2em .625em;
+  }
+}
+
+// Circular button
+.button-circle {
+  display: block;
+  background: rgba(0, 0, 0, .2);
+  padding-top: .425em;
+  font-size: 2em;
+  
+  @include border-radius(50%);
+  height: remCalc( 52px );
+  width: remCalc( 52px );
+}
+
+// Fieldset elements
+fieldset {
+	padding: 1em 0;
+	margin-bottom: $row-padding;
+	
+	.note {
+		color: $dark-color;
+		margin-left: 1em;
+	}
+}

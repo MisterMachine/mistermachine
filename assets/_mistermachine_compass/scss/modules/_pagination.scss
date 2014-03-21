@@ -1,0 +1,44 @@
+// $Pagination
+//
+
+.shuttle {	
+	display: block;
+	
+	.arrow {
+		display: block;
+		position: absolute;
+		
+		height: remCalc(42px);
+		width: remCalc(42px);
+		line-height: remCalc(42px);
+
+		text-align: center;
+
+		color: $darker-color;
+		
+		transition: ease-in-out all .4s; 
+    -moz-transition: ease-in-out all .4s;
+    -webkit-transition: ease-in-out all .4s;
+		
+		&:hover { color: $primary-color; }
+		
+		span {
+			font-size: emCalc(32px);
+			line-height: remCalc(42px);
+		}
+	}
+	
+	// arrows
+	.left-arrow, .right-arrow {
+		top: 50%;
+		z-index: 200;			 
+	}
+	
+	.left-arrow {
+		left: 1em;
+	}
+	
+	.right-arrow {
+		right: 1em;
+	}
+}	

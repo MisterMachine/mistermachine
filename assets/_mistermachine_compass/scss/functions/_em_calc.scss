@@ -1,0 +1,7 @@
+//
+// Translates pixels to ems.
+// Uses $base-font-size for... base, yeah.
+//
+@function emCalc( $size ) {
+    @return ( $size / $base-font-size ) * 1em;
+}

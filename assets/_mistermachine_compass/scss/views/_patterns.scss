@@ -1,0 +1,104 @@
+// Styles specific to Content
+//
+
+$row-content-max-width: emCalc(820px);
+
+.hero {
+	padding-bottom: $row-padding * 2;
+}
+
+.process {
+	.silo {
+			@include rhythm(0, 0, 0, 0);
+			@include breakpoint( medium ) {
+				max-width: $row-content-max-width;
+				margin-left: auto;
+				margin-right: auto;
+				@include rhythm(1, 1, 1, 1);
+			}
+	}
+	
+	h2 {
+		padding-top: $row-padding;
+			@include breakpoint( medium ) {
+				padding-top: $row-padding * 3;
+		}
+	}
+}
+
+.services {
+	.silo {
+			@include rhythm(0, 0, 0, 0);
+			@include breakpoint( medium ) {
+				max-width: $row-content-max-width;
+				margin-left: auto;
+				margin-right: auto;
+				@include rhythm(1, 1, 1, 1);
+			}
+	}
+	
+	h2 {
+		padding-top: $row-padding;
+			@include breakpoint( medium ) {
+				padding-top: $row-padding * 3;
+		}
+	}
+}
+
+.slide.row {
+	margin-bottom: $row-padding * 2;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.device-screen,
+.device-mobile,
+.device-tablet {
+		border: 0;
+		
+		img {
+			border-width: 2px;
+			border-style: solid;
+			border-color: $dim-color;
+			margin-left: auto;
+			margin-right: auto;	
+			margin-bottom: 1em;
+		}
+}
+
+@include breakpoint( medium ) {
+	.device-screen {
+		border-width: 2.5em 1px 1px 1px;
+		border-style: solid;
+		border-color: $secondary-color;
+		@include border-top-radius (10px);
+	}
+	
+	.device-mobile {
+		border-width: 4em .5em 4em .5em;
+		border-style: solid;
+		border-color: $secondary-color;
+		@include border-radius (20px);
+	}
+	
+	.device-tablet {
+		border-width: .5em 4em;
+		border-style: solid;
+		border-color: $secondary-color;
+		@include border-radius (20px);
+	}
+	
+	.device-screen,
+	.device-mobile,
+	.device-tablet {
+		img {
+			border: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+nav img {
+	margin-left: auto;
+	margin-right: auto;
+}

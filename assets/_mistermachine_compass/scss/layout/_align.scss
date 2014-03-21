@@ -1,0 +1,106 @@
+// $Alignments
+//
+
+$row-padding: $base-line-height;
+$column-padding: $base-line-height;
+
+// Base Floats
+.left, .base-left {
+	float: left;
+}
+
+.right, .base-right {
+	float: right;
+}
+
+// Clears
+.clear {
+	@include clearfix(); 
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.medium-text-left {
+	text-align: center;
+}
+
+@include breakpoint( medium ) {
+	
+	.medium-text-left {
+		text-align: left;
+	}
+	
+	.base-left, .base-right {
+		float: none;
+	}
+	
+	// Float at medium up
+	.medium-left {
+		float: left;
+	}
+	
+	.medium-right {
+		float: right;
+	}
+	
+	// Absolute positioning helpers
+	.top-left, .top-right, .bottom-left, .bottom-right, .middle-left, .middle-right {
+		position: absolute;
+	}
+	
+	.top-left, .top-right {
+		top: $column-padding;
+	}
+	
+	.top-left {
+		left: $column-padding;
+	}
+	
+	.top-right {
+		right: $column-padding;
+	}
+	
+	.bottom-left, .bottom-right {
+		bottom: $column-padding;
+	}
+	
+	.bottom-left {
+		left: $column-padding;
+	}
+	
+	.bottom-right {
+		right: $column-padding;
+	}
+	
+	.middle-left, .middle-right {
+		top: 50%;
+	}
+	
+	.middle-left {
+		left: $column-padding;
+	}
+	
+	.middle-right {
+		right: $column-padding;
+	}
+}
+
+// Inline lists
+.inline-list {
+	li {
+		display: inline-block;
+		margin-right: .5em;
+	}
+}
+
+// Centering
+.centered {
+	float: none !important;
+	margin: 0 auto;
+	
+	img {
+		display: inline;
+	}
+}

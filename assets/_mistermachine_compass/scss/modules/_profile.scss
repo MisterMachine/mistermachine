@@ -1,0 +1,76 @@
+// $Profile elements
+//
+
+.profile {
+	padding-top: $row-padding;
+	padding-bottom: $row-padding;
+	min-height: emCalc(100px);
+	
+	@include breakpoint( medium ) {
+		min-height: emCalc(200px);
+	}
+	
+	&.border-bottom {
+		border-bottom-width: 6px;
+		border-bottom-color: $dim-color;
+		border-style: solid;
+	}
+	
+	//avatar
+	.avatar {	
+		img {
+			border-width: 6px;
+			&.left {
+				margin-right: 1em;
+			}
+		}	
+	}
+	
+	//statistics
+	.stats {
+		margin-top: 1em;
+		li {
+			display: inline-block;
+			margin: 0 1em;
+		}
+	}
+	
+	//text-shadow
+	h1, h2, h3, h4, h5, h6, p, span, a {
+		text-shadow: 2px 2px 4px rgba($secondary-color, .6);
+		color: $wash-color;
+	}
+	
+	//profile details
+	hgroup {
+		margin-bottom: 1em;
+	}
+
+	.valign {
+		padding: 5% 0;
+		margin-bottom: 0;
+	}
+}	
+
+//stat-bar
+.stat-bar {
+	margin: .5em 0;	
+	li {
+		margin-right: 2em;
+	}
+	
+	.count {
+		line-height: emCalc(12px);
+		padding-top: .5em;
+	}
+}
+	
+//messaging bar for invite
+.message-bar	{
+	padding: 1em 0;
+	
+	.message {
+		line-height: emCalc(40px);
+		padding-right: 1em;
+	}
+}

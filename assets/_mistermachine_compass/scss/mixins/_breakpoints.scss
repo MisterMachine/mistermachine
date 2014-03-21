@@ -1,0 +1,54 @@
+//
+// Breakpoint
+// If $fixed-media variable is set to 'true', all properties called in the mixin will be compiled out.
+// For example, legacy IE browsers will get the desktop only version of the app (fixed media).
+//
+$fixed-media: false !default;
+
+@mixin breakpoint( $size: screen ) {
+
+    @if $fixed-media == false { // Not using fixed-media, use media queries
+
+        @if $size == small {
+            @media #{$small} {
+                @content;
+            }
+        }
+        @else if $size == medium {
+            @media #{$medium} {
+                @content;
+            }
+        }
+        @else if $size == desktop {
+            @media #{$desktop} {
+                @content;
+            }
+        }
+        @else if $size == large {
+            @media #{$large} {
+                @content;
+            }
+        }
+        @else if $size == landscape {
+            @media #{$landscape} {
+                @content;
+            }
+        }
+        @else {
+            @media #{$screen} {
+                @content;
+            }
+        }
+
+    } @else {
+
+        // Compile out without media queries
+        @content;
+    }
+
+}
+
+// Short-hand version of breakpoint
+@mixin bp( $size: screen ) {
+    @include breakpoint( $size );
+}

@@ -1,27 +1,99 @@
-/* Menus */
-.menu {
+// $Navigation
+//
+// Breakpoints
+// Default: Top bar with Menu Icon and off canvas top
+// Small: Left bar with Menu Icon and off canvas left
+// Large: Top bar with Inline Menu
+//
 
-  }
-
-.menu-primary li {
-  display: inline;
-  padding: 1em 1.5em;
-  }
-
-.menu-primary li.btn {
-  padding: 0;
-  }
-  
-  .menu-primary li.btn a {
-    padding: 1em 1.5em;
-    background-color: #9bcfdd;
-  }
-
-.menu-primary li a {
-
+// Menu icon
+a.menu-link {
+  float: right;
+  display: block;
+  padding: emCalc(18px);
+  vertical-align: middle;
+  z-index: 200;
+  position: relative;
+  background: darken($secondary-color, 10%);
 }
 
-.nav-primary {
-  text-align: center;
-  padding-bottom: 0;
-  }
+// Optional css animation
+.ease {
+//	@include transition(all 0.3s ease-out);
+}
+
+
+// Navigation
+nav[role=navigation] {
+	display: none;
+	width: 100%;
+	//clear: both;
+	overflow: hidden;
+//	max-height: 0;
+
+	&.active {
+		max-height: 15em;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: block;
+		max-height: $control-unit;
+		overflow: hidden;	
+		
+		a {
+		@include adjust-font-size-to(16px);
+		display: block;
+		padding: 0 emCalc(18px);
+		line-height: $control-unit;
+		@include transition(all 0.3s ease-out);
+			
+			&:hover {
+				//background-color: darken($secondary-color, 10%);				
+			}
+		}
+	}
+}
+
+@include breakpoint( desktop ) {
+	
+	// Menu icon
+	a.menu-link {
+		float: none;
+		display: none;
+	}
+	
+	// Control bar
+	.control {
+		position: relative;
+		width: 100%;
+		height: $control-unit;
+		
+		.logo { 
+			//width: $control-unit;
+		}	
+	}
+
+	// Navigation
+	nav[role=navigation] {
+		display: block;
+		width: auto;
+		text-align: center;
+		
+		ul { }
+		
+		li {
+			display: inline-block;
+			margin: 0;
+				
+			a {
+				float: left;
+				border: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+// $Post elements
+//
+
+@import "compass/typography/vertical_rhythm";
+$row-padding: $base-line-height;
+$column-padding: $base-line-height;
+
+.post {
+	background-color: $wash-color;
+	@include box-shadow(0 1px 2px rgba($dark-color, .275));
+	margin-bottom: .75em;
+	
+	h2 a {
+		color: $primary-color;
+	}
+	
+	[class*='post-'] {
+		padding: .5em 1em;
+	}
+	
+	//post header
+	.post-header {
+		@include clearfix();
+		padding-left: .5em;
+		h2 {
+			margin-top: .625em;
+			margin-bottom: 0;
+		}
+	
+	.avatar {
+		margin-right: .5em;
+		display: block;
+		}
+	
+		h3, .meta {
+			color: $dark-color;
+		}
+	}
+	
+	//post article
+	.post-article {
+		padding-top: 1em;
+	}
+	
+	//post repost
+	.post-repost{
+		color: 	$dark-color;
+		padding: .75em 1em;
+		
+		h2 {
+			margin-top: .275em;
+		}	
+			
+		.normal {
+			font-family: $sans-font-family;
+		}
+	}
+	
+	//post figure
+	.post-figure {
+		padding: 0;
+		position: relative;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		
+		.corner {
+			position: absolute;
+			display: block;
+			bottom: 0;
+			right: 0;
+			text-align: center;
+			//vertical-align: middle;
+			
+			width: emCalc(55px);
+			height: emCalc(55px);
+			color: $tint-color;
+			
+			//triangles
+			.angle-right {
+		    width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 0 0 55px 55px;
+				border-color: transparent transparent $secondary-color transparent;
+			
+				&.angle-buy {
+					border-color: transparent transparent $success-color transparent;
+				}
+			}
+							
+			[class^="icon-"], [class*=" icon-"] {
+				line-height: emCalc(30px);
+				position: absolute;
+				bottom: 0;
+				right: .25em;
+				z-index: 200;
+			}
+		}
+	}
+	
+	//post footer
+	.post-footer {
+		padding-top: 0;
+		color: $dark-color;
+		
+		li {
+			line-height: emCalc(20px);
+		}
+	}
+}

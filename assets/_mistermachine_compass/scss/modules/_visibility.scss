@@ -1,0 +1,45 @@
+// $Visibility
+//
+
+//hide from default
+.hide, 
+.hide-base, 
+.show-medium {
+	display: none;
+}
+
+@include breakpoint( small ) {
+	.hide-base {
+		display: block;
+	}
+	
+	//hide from small screens and up
+	.hide-small {
+		display: none;
+	}
+}
+
+@include breakpoint( medium ) {
+	//hide from medium screens and up
+	.show-medium {
+		display: block;
+	}
+	
+	.hide-medium {
+		display: none;
+	}
+}
+
+@include breakpoint( desktop ) {
+	//hide from desktop screens and up
+	.hide-desktop {
+		display: none;
+	}
+}
+
+@include breakpoint( large ) {
+	//hide from large screens and up
+	.hide-large {
+		display: none;
+	}
+}

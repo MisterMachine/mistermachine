@@ -1,0 +1,32 @@
+// $Header
+//
+
+$control-unit: remCalc(80px);
+
+.control {
+	margin-bottom: $column-padding * 2;
+	
+	.logo {
+		//position: absolute;
+		display: block;
+		background: $primary-color;
+		
+		height: $control-unit;
+		//width: $control-unit;
+		line-height: $control-unit;
+		vertical-align: middle;
+		text-align: center;
+		
+		img {
+			position: absolute;
+			top: emCalc(14px);;
+			left: emCalc(14px);;
+			height: $control-unit / 2;
+		}
+	}
+	
+	a {
+		color: $blank-color;
+		//white-space: nowrap;
+	}
+}

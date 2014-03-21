@@ -1,13 +1,131 @@
-/* Class Grid based on OOCSS */
-.row,
-footer {
-  width: auto;
-  padding: 0 1.625em;
-  }
+// $Grid
+//
+// Variables
+// Rows: a horizontal block to contain vertical elements
+// Units: floated vertical elements 
+// Columns: floated vertical elements that toggle on breakpoints 
+// Collapse: removes padding from a row
+//
 
-.row,
-.lastUnit {
-  overflow: hidden;
-  *overflow: visible;
-  * zoom:1;
+$row-medium-max-width: emCalc(960px);
+$row-large-max-width: emCalc(1280px);
+$row-padding: $base-line-height;
+$column-padding: $base-line-height;
+
+$size1of2-width: 50%; 
+$size1of3-width: 33.33333%; 
+$size2of3-width: 66.66666%; 
+$size1of4-width: 25%; 
+$size3of4-width: 75%; 
+$size1of5-width: 20%; 
+$size2of5-width: 40%; 
+$size3of5-width: 60%; 
+$size4of5-width: 80%;
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+	
+	// Removes padding behaviour on widths
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// Class Grid based on OOCSS
+ 
+.row { 
+  width: 100%;
+  padding: $row-padding;
+  @include clearfix(); 
+  
+  &.collapse {
+    padding: 0;
   }
+  
+  &.collapse-tall {
+    padding: 0 $row-padding; 
+  }
+  
+  &.collapse-wide {
+    padding: $row-padding 0; 
+  }  
+  
+  &.full {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  @include breakpoint( medium ) {
+    max-width: $row-medium-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $row-padding;
+    
+    &.row-wide {
+	   max-width: $row-large-max-width; 
+    }  
+  }
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+// Floated elements
+
+.unit { 
+	float:left;
+	padding: 0 .25em;
+	 
+  &.size1of1 { float: none;}
+  &.size1of2 { width: $size1of2-width; }
+  &.size1of3 { width: $size1of3-width; }
+  &.size2of3 { width: $size2of3-width; }
+  &.size1of4 { width: $size1of4-width; }
+  &.size3of4 { width: $size3of4-width; }
+  &.size1of5 { width: $size1of5-width; }
+  &.size2of5 { width: $size2of5-width; }
+  &.size3of5 { width: $size3of5-width; }
+  &.size4of5 { width: $size4of5-width; }
+}
+
+.unit-right { float:right; }
+.unit:last-of-type {  }
+
+// Medium up floated elements
+
+.column { 
+  
+  padding: 0 .5rem ; 
+	
+	&.centered {
+		padding: 0;
+	}
+	
+	@include breakpoint( medium ) { 
+	float:left;	
+  padding-bottom: 0;
+  &.size1of1 { float: none;}
+  &.size1of2 { width: $size1of2-width; }
+  &.size1of3 { width: $size1of3-width; }
+  &.size2of3 { width: $size2of3-width; }
+  &.size1of4 { width: $size1of4-width; }
+  &.size3of4 { width: $size3of4-width; }
+  &.size1of5 { width: $size1of5-width; }
+  &.size2of5 { width: $size2of5-width; }
+  &.size3of5 { width: $size3of5-width; }
+  &.size4of5 { width: $size4of5-width; }
+  &.right { float: right;}
+  }
+}
+
+.column:last-of-type {  }
+
+// Content blocks
+
+.panel { padding: $row-padding }

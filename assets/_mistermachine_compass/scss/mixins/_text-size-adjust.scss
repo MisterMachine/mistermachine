@@ -1,0 +1,15 @@
+// text-size-adjust
+//
+
+//
+// Values: none (default), auto, 100%
+//
+// Reference:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+//
+
+@mixin text-size-adjust($value: none) {
+  -webkit-text-size-adjust: $value; 
+  -moz-text-size-adjust: $value;
+  -ms-text-size-adjust: $value; 
+}

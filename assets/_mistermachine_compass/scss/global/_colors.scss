@@ -1,0 +1,28 @@
+// $Color
+//
+
+// Backgrounds
+body {  }
+.dimmed { background-color: $dim-color; }
+
+.primary {
+	background-color: $primary-color;
+// Reverse type and links	
+	color: $blank-color;
+	a { color: $blank-color; }
+}
+
+.secondary { background-color: $secondary-color;
+	// Reverse type and links
+	color: $blank-color;
+		a { color: $blank-color; }
+	}
+
+// Links
+a {
+	&.grey {
+		color: $dark-color;
+	}
+}
+
+// Text colors
