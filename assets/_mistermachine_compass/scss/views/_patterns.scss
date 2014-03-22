@@ -51,6 +51,12 @@ $row-content-max-width: emCalc(820px);
 	margin-right: auto;
 }
 
+.inner-words {
+	@include breakpoint( medium ) {
+		padding: 2em;
+	}
+}
+
 .device-screen,
 .device-mobile,
 .device-tablet {

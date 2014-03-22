@@ -79,7 +79,7 @@ h1,
 
 h2,
 .beta {
-  @include adjust-font-size-to(20px);
+  @include adjust-font-size-to(26px);
   @include rhythm(0, 0, 0, 1);
 	@extend %hN;
 	font-weight: 600;

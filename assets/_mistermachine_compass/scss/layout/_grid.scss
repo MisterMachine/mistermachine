@@ -107,7 +107,7 @@ $size4of5-width: 80%;
 		padding: 0;
 	}
 	
-	@include breakpoint( medium ) { 
+	@include breakpoint( small ) { 
 	float:left;	
   padding-bottom: 0;
   &.size1of1 { float: none;}

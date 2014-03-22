@@ -59,7 +59,7 @@ nav[role=navigation] {
 	}
 }
 
-@include breakpoint( desktop ) {
+@include breakpoint( medium ) {
 	
 	// Menu icon
 	a.menu-link {

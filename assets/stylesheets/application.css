@@ -839,7 +839,7 @@ fieldset .note {
 .column.centered {
   padding: 0;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 30em) {
   /* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column {
     float: left;
@@ -1057,7 +1057,7 @@ nav[role=navigation] li a {
   transition: all 0.3s ease-out;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 48em) {
   /* line 65, ../_mistermachine_compass/scss/layout/_navigation.scss */
   a.menu-link {
     float: none;
@@ -1184,8 +1184,8 @@ h1,
 /* line 81, ../_mistermachine_compass/scss/global/_typography.scss */
 h2,
 .beta {
-  font-size: 1.25rem;
-  line-height: 1.625rem;
+  font-size: 1.625rem;
+  line-height: 3.25rem;
   margin-top: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -1358,11 +1358,17 @@ nav li {
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-/* line 6, ../_mistermachine_compass/scss/modules/_control.scss */
+/* line 10, ../_mistermachine_compass/scss/modules/_control.scss */
 .control {
-  margin-bottom: 52px;
+  margin-bottom: 26px;
 }
-/* line 9, ../_mistermachine_compass/scss/modules/_control.scss */
+@media only screen and (min-width: 48em) {
+  /* line 10, ../_mistermachine_compass/scss/modules/_control.scss */
+  .control {
+    margin-bottom: 26px;
+  }
+}
+/* line 17, ../_mistermachine_compass/scss/modules/_control.scss */
 .control .logo {
   display: block;
   background: #00baff;
@@ -1371,14 +1377,14 @@ nav li {
   vertical-align: middle;
   text-align: center;
 }
-/* line 20, ../_mistermachine_compass/scss/modules/_control.scss */
+/* line 28, ../_mistermachine_compass/scss/modules/_control.scss */
 .control .logo img {
   position: absolute;
   top: 0.875em;
   left: 0.875em;
   height: 2.5rem;
 }
-/* line 28, ../_mistermachine_compass/scss/modules/_control.scss */
+/* line 36, ../_mistermachine_compass/scss/modules/_control.scss */
 .control a {
   color: white;
 }
@@ -1781,13 +1787,20 @@ nav li {
   margin-right: auto;
 }
 
-/* line 56, ../_mistermachine_compass/scss/views/_patterns.scss */
+@media only screen and (min-width: 48em) {
+  /* line 54, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .inner-words {
+    padding: 2em;
+  }
+}
+
+/* line 62, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen,
 .device-mobile,
 .device-tablet {
   border: 0;
 }
-/* line 59, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 65, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen img,
 .device-mobile img,
 .device-tablet img {
@@ -1800,7 +1813,7 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 70, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 76, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen {
     border-width: 2.5em 1px 1px 1px;
     border-style: solid;
@@ -1813,7 +1826,7 @@ nav li {
     border-top-right-radius: 10px;
   }
 
-  /* line 77, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 83, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-mobile {
     border-width: 4em .5em 4em .5em;
     border-style: solid;
@@ -1825,7 +1838,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 84, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 90, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-tablet {
     border-width: .5em 4em;
     border-style: solid;
@@ -1837,7 +1850,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 94, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 100, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen img,
   .device-mobile img,
   .device-tablet img {
@@ -1845,7 +1858,7 @@ nav li {
     margin-bottom: 0;
   }
 }
-/* line 101, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 107, ../_mistermachine_compass/scss/views/_patterns.scss */
 nav img {
   margin-left: auto;
   margin-right: auto;

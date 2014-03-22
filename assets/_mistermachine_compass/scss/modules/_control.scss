@@ -1,10 +1,18 @@
 // $Header
 //
 
-$control-unit: remCalc(80px);
+$control-unit: remCalc(40px);
+
+@include breakpoint( medium ) { 
+	$control-unit: remCalc(80px);
+}
 
 .control {
-	margin-bottom: $column-padding * 2;
+	margin-bottom: $column-padding;
+	
+	@include breakpoint( medium ) { 
+		margin-bottom: $column-padding;
+	}
 	
 	.logo {
 		//position: absolute;
