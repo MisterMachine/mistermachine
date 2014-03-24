@@ -4,32 +4,17 @@
 $row-content-max-width: emCalc(820px);
 
 .hero {
-	padding-bottom: $row-padding * 2;
+	@include breakpoint( medium ) {
+		padding-bottom: $row-padding * 2;
+	}	
 }
 
-.process {
+.process, .services {
 	.silo {
 			@include rhythm(0, 0, 0, 0);
-			@include breakpoint( medium ) {
-				max-width: $row-content-max-width;
-				margin-left: auto;
-				margin-right: auto;
-				@include rhythm(1, 1, 1, 1);
-			}
-	}
-	
-	h2 {
-		padding-top: $row-padding;
-			@include breakpoint( medium ) {
-				padding-top: $row-padding * 3;
-		}
-	}
-}
-
-.services {
-	.silo {
-			@include rhythm(0, 0, 0, 0);
-			@include breakpoint( medium ) {
+			text-align: center;
+			@include breakpoint( portrait ) {
+				text-align: left;
 				max-width: $row-content-max-width;
 				margin-left: auto;
 				margin-right: auto;

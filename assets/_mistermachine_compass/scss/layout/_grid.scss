@@ -100,14 +100,17 @@ $size4of5-width: 80%;
 // Medium up floated elements
 
 .column { 
-  
-  padding: 0 .5rem ; 
+  padding: 0; 
+	
+	@include breakpoint( small ) {
+	 padding: 0 .5em;
+	}
 	
 	&.centered {
 		padding: 0;
 	}
 	
-	@include breakpoint( small ) { 
+	@include breakpoint( portrait ) { 
 	float:left;	
   padding-bottom: 0;
   &.size1of1 { float: none;}

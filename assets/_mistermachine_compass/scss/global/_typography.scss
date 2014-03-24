@@ -45,6 +45,7 @@ body {
 	display: block;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
+	text-align: center;
 	
 	// resets font weight to normal
 	&.normal {
@@ -53,6 +54,14 @@ body {
 	
 	& [class^="icon-"], & [class*=" icon-"]	{
 		margin-right: .25em;
+	}
+	
+	&.center {
+		text-align: center;
+	}
+	
+	@include breakpoint( portrait ) {
+	text-align: left;
 	}
 }
 
@@ -64,22 +73,25 @@ body {
 // h1-h6 tags
 h1,
 .alpha {
-	@include adjust-font-size-to(34px);
+	@include adjust-font-size-to(30px);
 	@include adjust-leading-to(1.25);
-	@include rhythm(1, 1, 0, 1);
+	@include rhythm(0, 1, 0, 1);
 	@extend %hN;
-	font-weight: 300;
+	font-weight: 500;
 	
 	@include breakpoint( medium ) {
 		@include adjust-font-size-to( 82px);
 		@include adjust-leading-to(3);
+		@include rhythm(1, 1, 0, 1);
 		letter-spacing: -2px;
+		font-weight: 300;
 	}
 }
 
 h2,
 .beta {
-  @include adjust-font-size-to(26px);
+  @include adjust-font-size-to(24px);
+  @include adjust-leading-to(1.25);
   @include rhythm(0, 0, 0, 1);
 	@extend %hN;
 	font-weight: 600;
@@ -92,7 +104,7 @@ h2,
 h3,
 .gamma {
   @include adjust-font-size-to(18px);
-  @include adjust-leading-to(1.25);
+  @include adjust-leading-to(1.125);
   @include rhythm(0, 0, 0, 1);
 	@extend %hN;
 	font-weight: 400;
@@ -134,6 +146,13 @@ h6,
 	@include breakpoint( medium ) {
 		@include adjust-font-size-to(14px);
 	}
+}
+
+h1.mega {
+	@include adjust-font-size-to(100px);
+	//@include adjust-leading-to(10);
+	@include rhythm(1, 0, 0, 1);
+	font-weight: 700;
 }
 
 p {

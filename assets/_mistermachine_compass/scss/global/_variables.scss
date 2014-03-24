@@ -58,6 +58,9 @@ $column-padding: $base-line-height;
 // small and up
 $small-screen:      emCalc( 480px ) !default; 
 
+// portrait and up
+$portrait-screen:   emCalc( 640px ) !default;
+
 // medium and up
 $medium-screen:     emCalc( 768px ) !default;
 
@@ -72,6 +75,7 @@ $large-screen:      emCalc( 1200px ) !default;
 
 $screen:            "only screen" !default;
 $small:             "#{$screen} and (min-width: #{$small-screen})" !default;
+$portrait:          "#{$screen} and (min-width: #{$portrait-screen})" !default;
 $medium:            "#{$screen} and (min-width: #{$medium-screen})" !default;
 $desktop:           "#{$screen} and (min-width: #{$desktop-screen})" !default;
 $large:             "#{$screen} and (min-width: #{$large-screen})" !default;

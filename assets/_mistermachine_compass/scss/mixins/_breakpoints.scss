@@ -14,6 +14,11 @@ $fixed-media: false !default;
                 @content;
             }
         }
+        @else if $size == portrait {
+            @media #{$portrait} {
+                @content;
+            }
+        }
         @else if $size == medium {
             @media #{$medium} {
                 @content;

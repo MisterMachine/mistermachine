@@ -140,30 +140,31 @@ img, video, object {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
-/* line 9, ../_mistermachine_compass/scss/global/_media.scss */
+/* line 10, ../_mistermachine_compass/scss/global/_media.scss */
 img.no-resize, video.no-resize, object.no-resize {
   max-width: none;
 }
 
-/* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+/* line 16, ../_mistermachine_compass/scss/global/_media.scss */
 .squeeze {
   overflow: hidden;
 }
 @media only screen and (min-width: 48em) {
-  /* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+  /* line 16, ../_mistermachine_compass/scss/global/_media.scss */
   .squeeze {
     height: 18em;
   }
 }
 @media only screen and (min-width: 75em) {
-  /* line 15, ../_mistermachine_compass/scss/global/_media.scss */
+  /* line 16, ../_mistermachine_compass/scss/global/_media.scss */
   .squeeze {
     height: 19.5em;
   }
 }
 
-/* line 28, ../_mistermachine_compass/scss/global/_media.scss */
+/* line 29, ../_mistermachine_compass/scss/global/_media.scss */
 .round {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -830,65 +831,71 @@ fieldset .note {
 
 /* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
 .column {
-  padding: 0 0.5rem;
-}
-/* line 106, ../_mistermachine_compass/scss/layout/_grid.scss */
-.column.centered {
   padding: 0;
 }
 @media only screen and (min-width: 30em) {
   /* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column {
+    padding: 0 .5em;
+  }
+}
+/* line 109, ../_mistermachine_compass/scss/layout/_grid.scss */
+.column.centered {
+  padding: 0;
+}
+@media only screen and (min-width: 40em) {
+  /* line 102, ../_mistermachine_compass/scss/layout/_grid.scss */
+  .column {
     float: left;
     padding-bottom: 0;
   }
-  /* line 113, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 116, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size1of1 {
     float: none;
   }
-  /* line 114, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 117, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size1of2 {
     width: 50%;
   }
-  /* line 115, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 118, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size1of3 {
     width: 33.33333%;
   }
-  /* line 116, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 119, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size2of3 {
     width: 66.66666%;
   }
-  /* line 117, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 120, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size1of4 {
     width: 25%;
   }
-  /* line 118, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 121, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size3of4 {
     width: 75%;
   }
-  /* line 119, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 122, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size1of5 {
     width: 20%;
   }
-  /* line 120, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 123, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size2of5 {
     width: 40%;
   }
-  /* line 121, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 124, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size3of5 {
     width: 60%;
   }
-  /* line 122, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 125, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.size4of5 {
     width: 80%;
   }
-  /* line 123, ../_mistermachine_compass/scss/layout/_grid.scss */
+  /* line 126, ../_mistermachine_compass/scss/layout/_grid.scss */
   .column.right {
     float: right;
   }
 }
 
-/* line 131, ../_mistermachine_compass/scss/layout/_grid.scss */
+/* line 134, ../_mistermachine_compass/scss/layout/_grid.scss */
 .panel {
   padding: 26px;
 }
@@ -1123,8 +1130,9 @@ h1,
   display: block;
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
-/* line 50, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 51, ../_mistermachine_compass/scss/global/_typography.scss */
 h1.normal,
 .normal.alpha, h2.normal,
 .normal.beta, h3.normal,
@@ -1134,7 +1142,7 @@ h1.normal,
 .normal.zeta {
   font-weight: 500;
 }
-/* line 54, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 55, ../_mistermachine_compass/scss/global/_typography.scss */
 h1 [class^="icon-"],
 .alpha [class^="icon-"], h2 [class^="icon-"],
 .beta [class^="icon-"], h3 [class^="icon-"],
@@ -1150,40 +1158,68 @@ h1 [class^="icon-"],
 .zeta [class*=" icon-"] {
   margin-right: .25em;
 }
+/* line 59, ../_mistermachine_compass/scss/global/_typography.scss */
+h1.center,
+.center.alpha, h2.center,
+.center.beta, h3.center,
+.center.gamma, h4.center,
+.center.delta, h5.center,
+.center.epsilon, h6.center,
+.center.zeta {
+  text-align: center;
+}
+@media only screen and (min-width: 40em) {
+  /* line 42, ../_mistermachine_compass/scss/global/_typography.scss */
+  h1,
+  .alpha, h2,
+  .beta, h3,
+  .gamma, h4,
+  .delta, h5,
+  .epsilon, h6,
+  .zeta {
+    text-align: left;
+  }
+}
 
-/* line 60, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 69, ../_mistermachine_compass/scss/global/_typography.scss */
 .rhythm {
   margin-bottom: 1.625rem;
 }
 
-/* line 66, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 75, ../_mistermachine_compass/scss/global/_typography.scss */
 h1,
 .alpha {
-  font-size: 2.125rem;
+  font-size: 1.875rem;
   line-height: 3.25rem;
   line-height: 2.03125rem;
-  margin-top: 1.625rem;
+  margin-top: 0rem;
   padding-top: 1.625rem;
   padding-bottom: 0rem;
   margin-bottom: 1.625rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 @media only screen and (min-width: 48em) {
-  /* line 66, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 75, ../_mistermachine_compass/scss/global/_typography.scss */
   h1,
   .alpha {
     font-size: 5.125rem;
     line-height: 6.5rem;
     line-height: 4.875rem;
+    margin-top: 1.625rem;
+    padding-top: 1.625rem;
+    padding-bottom: 0rem;
+    margin-bottom: 1.625rem;
     letter-spacing: -2px;
+    font-weight: 300;
   }
 }
 
-/* line 81, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 92, ../_mistermachine_compass/scss/global/_typography.scss */
 h2,
 .beta {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: 3.25rem;
+  line-height: 2.03125rem;
   margin-top: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -1191,7 +1227,7 @@ h2,
   font-weight: 600;
 }
 @media only screen and (min-width: 48em) {
-  /* line 81, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 92, ../_mistermachine_compass/scss/global/_typography.scss */
   h2,
   .beta {
     font-size: 1.875rem;
@@ -1200,12 +1236,12 @@ h2,
   }
 }
 
-/* line 93, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 105, ../_mistermachine_compass/scss/global/_typography.scss */
 h3,
 .gamma {
   font-size: 1.125rem;
   line-height: 1.625rem;
-  line-height: 2.03125rem;
+  line-height: 1.82813rem;
   margin-top: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -1213,7 +1249,7 @@ h3,
   font-weight: 400;
 }
 @media only screen and (min-width: 48em) {
-  /* line 93, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 105, ../_mistermachine_compass/scss/global/_typography.scss */
   h3,
   .gamma {
     font-size: 1.375rem;
@@ -1223,7 +1259,7 @@ h3,
   }
 }
 
-/* line 108, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
 h4,
 .delta {
   font-size: 1rem;
@@ -1235,7 +1271,7 @@ h4,
   margin-bottom: 1.625rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 108, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
   h4,
   .delta {
     font-size: 1.375rem;
@@ -1243,7 +1279,7 @@ h4,
   }
 }
 
-/* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 132, ../_mistermachine_compass/scss/global/_typography.scss */
 h5,
 .epsilon {
   font-size: 0.875rem;
@@ -1254,7 +1290,7 @@ h5,
   margin-bottom: 1.625rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 120, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 132, ../_mistermachine_compass/scss/global/_typography.scss */
   h5,
   .epsilon {
     font-size: 1rem;
@@ -1262,7 +1298,7 @@ h5,
   }
 }
 
-/* line 130, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 142, ../_mistermachine_compass/scss/global/_typography.scss */
 h6,
 .zeta {
   font-size: 0.75rem;
@@ -1273,7 +1309,7 @@ h6,
   margin-bottom: 1.625rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 130, ../_mistermachine_compass/scss/global/_typography.scss */
+  /* line 142, ../_mistermachine_compass/scss/global/_typography.scss */
   h6,
   .zeta {
     font-size: 0.875rem;
@@ -1281,7 +1317,18 @@ h6,
   }
 }
 
-/* line 139, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 151, ../_mistermachine_compass/scss/global/_typography.scss */
+h1.mega {
+  font-size: 6.25rem;
+  line-height: 6.5rem;
+  margin-top: 1.625rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-bottom: 1.625rem;
+  font-weight: 700;
+}
+
+/* line 158, ../_mistermachine_compass/scss/global/_typography.scss */
 p {
   margin-top: 0rem;
   padding-top: 0rem;
@@ -1289,18 +1336,18 @@ p {
   margin-bottom: 1.625rem;
 }
 
-/* line 143, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 162, ../_mistermachine_compass/scss/global/_typography.scss */
 span {
   margin-bottom: 0;
 }
 
-/* line 149, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 168, ../_mistermachine_compass/scss/global/_typography.scss */
 a {
   text-decoration: none;
   color: #2b3a49;
 }
 
-/* line 154, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 173, ../_mistermachine_compass/scss/global/_typography.scss */
 .small {
   font-size: 0.75rem;
   line-height: 1.625rem;
@@ -1308,47 +1355,47 @@ a {
   text-transform: none;
 }
 
-/* line 160, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 179, ../_mistermachine_compass/scss/global/_typography.scss */
 small {
   color: #9f988d;
 }
 
-/* line 164, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 183, ../_mistermachine_compass/scss/global/_typography.scss */
 .sans {
   font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 168, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 187, ../_mistermachine_compass/scss/global/_typography.scss */
 .serif {
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Georgia", serif;
 }
 
-/* line 172, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 191, ../_mistermachine_compass/scss/global/_typography.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 176, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 195, ../_mistermachine_compass/scss/global/_typography.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 180, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 199, ../_mistermachine_compass/scss/global/_typography.scss */
 .alignleft {
   text-align: left;
 }
 
-/* line 184, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 203, ../_mistermachine_compass/scss/global/_typography.scss */
 .alignright {
   text-align: right;
 }
 
-/* line 188, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 207, ../_mistermachine_compass/scss/global/_typography.scss */
 .no-margin {
   margin-bottom: 0;
 }
 
-/* line 192, ../_mistermachine_compass/scss/global/_typography.scss */
+/* line 211, ../_mistermachine_compass/scss/global/_typography.scss */
 nav li {
   font-family: "Gotham SSm A", "Gotham SSm B", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1368,7 +1415,6 @@ nav li {
 }
 /* line 17, ../_mistermachine_compass/scss/modules/_control.scss */
 .control .logo {
-  display: block;
   background: #00baff;
   height: 5rem;
   line-height: 5rem;
@@ -1713,21 +1759,25 @@ nav li {
 /*------------------------------------*\
     $VIEWS
 \*------------------------------------*/
-/* line 6, ../_mistermachine_compass/scss/views/_patterns.scss */
-.hero {
-  padding-bottom: 52px;
+@media only screen and (min-width: 48em) {
+  /* line 6, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .hero {
+    padding-bottom: 52px;
+  }
 }
 
-/* line 11, ../_mistermachine_compass/scss/views/_patterns.scss */
-.process .silo {
+/* line 13, ../_mistermachine_compass/scss/views/_patterns.scss */
+.process .silo, .services .silo {
   margin-top: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
   margin-bottom: 0rem;
+  text-align: center;
 }
-@media only screen and (min-width: 48em) {
-  /* line 11, ../_mistermachine_compass/scss/views/_patterns.scss */
-  .process .silo {
+@media only screen and (min-width: 40em) {
+  /* line 13, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .process .silo, .services .silo {
+    text-align: left;
     max-width: 51.25em;
     margin-left: auto;
     margin-right: auto;
@@ -1737,48 +1787,18 @@ nav li {
     margin-bottom: 1.625rem;
   }
 }
-/* line 21, ../_mistermachine_compass/scss/views/_patterns.scss */
-.process h2 {
+/* line 25, ../_mistermachine_compass/scss/views/_patterns.scss */
+.process h2, .services h2 {
   padding-top: 26px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 21, ../_mistermachine_compass/scss/views/_patterns.scss */
-  .process h2 {
+  /* line 25, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .process h2, .services h2 {
     padding-top: 78px;
   }
 }
 
-/* line 30, ../_mistermachine_compass/scss/views/_patterns.scss */
-.services .silo {
-  margin-top: 0rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  margin-bottom: 0rem;
-}
-@media only screen and (min-width: 48em) {
-  /* line 30, ../_mistermachine_compass/scss/views/_patterns.scss */
-  .services .silo {
-    max-width: 51.25em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.625rem;
-    padding-top: 1.625rem;
-    padding-bottom: 1.625rem;
-    margin-bottom: 1.625rem;
-  }
-}
-/* line 40, ../_mistermachine_compass/scss/views/_patterns.scss */
-.services h2 {
-  padding-top: 26px;
-}
-@media only screen and (min-width: 48em) {
-  /* line 40, ../_mistermachine_compass/scss/views/_patterns.scss */
-  .services h2 {
-    padding-top: 78px;
-  }
-}
-
-/* line 49, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 34, ../_mistermachine_compass/scss/views/_patterns.scss */
 .bullets .round {
   background: white;
   display: block;
@@ -1787,7 +1807,7 @@ nav li {
   margin: 0 auto .5em;
 }
 
-/* line 58, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 43, ../_mistermachine_compass/scss/views/_patterns.scss */
 .slide.row {
   margin-bottom: 52px;
   margin-left: auto;
@@ -1795,19 +1815,19 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 64, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 49, ../_mistermachine_compass/scss/views/_patterns.scss */
   .inner-words {
     padding: 2em;
   }
 }
 
-/* line 72, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 57, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen,
 .device-mobile,
 .device-tablet {
   border: 0;
 }
-/* line 75, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 60, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen img,
 .device-mobile img,
 .device-tablet img {
@@ -1820,7 +1840,7 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 86, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 71, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen {
     border-width: 2.5em 1px 1px 1px;
     border-style: solid;
@@ -1833,7 +1853,7 @@ nav li {
     border-top-right-radius: 10px;
   }
 
-  /* line 93, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 78, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-mobile {
     border-width: 4em .5em 4em .5em;
     border-style: solid;
@@ -1845,7 +1865,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 100, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 85, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-tablet {
     border-width: .5em 4em;
     border-style: solid;
@@ -1857,7 +1877,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 110, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 95, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen img,
   .device-mobile img,
   .device-tablet img {
@@ -1865,7 +1885,7 @@ nav li {
     margin-bottom: 0;
   }
 }
-/* line 117, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 102, ../_mistermachine_compass/scss/views/_patterns.scss */
 nav img {
   margin-left: auto;
   margin-right: auto;
