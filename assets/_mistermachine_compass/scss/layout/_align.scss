@@ -99,6 +99,7 @@ $column-padding: $base-line-height;
 .centered {
 	float: none !important;
 	margin: 0 auto;
+	display: block;
 	
 	img {
 		display: inline;

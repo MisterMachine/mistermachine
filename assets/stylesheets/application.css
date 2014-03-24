@@ -1003,8 +1003,9 @@ fieldset .note {
 .centered {
   float: none !important;
   margin: 0 auto;
+  display: block;
 }
-/* line 103, ../_mistermachine_compass/scss/layout/_align.scss */
+/* line 104, ../_mistermachine_compass/scss/layout/_align.scss */
 .centered img {
   display: inline;
 }
