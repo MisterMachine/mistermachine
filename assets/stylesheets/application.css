@@ -171,9 +171,6 @@ img.no-resize, video.no-resize, object.no-resize {
   -o-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
-  border-width: 3px;
-  border-color: #cccccc;
-  border-style: solid;
 }
 
 /* line 25, ../_mistermachine_compass/scss/global/_forms.scss */
@@ -1780,7 +1777,16 @@ nav li {
   }
 }
 
-/* line 48, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 49, ../_mistermachine_compass/scss/views/_patterns.scss */
+.bullets .round {
+  background: white;
+  display: block;
+  height: 4em;
+  width: 4em;
+  margin: 0 auto .5em;
+}
+
+/* line 58, ../_mistermachine_compass/scss/views/_patterns.scss */
 .slide.row {
   margin-bottom: 52px;
   margin-left: auto;
@@ -1788,19 +1794,19 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 54, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 64, ../_mistermachine_compass/scss/views/_patterns.scss */
   .inner-words {
     padding: 2em;
   }
 }
 
-/* line 62, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 72, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen,
 .device-mobile,
 .device-tablet {
   border: 0;
 }
-/* line 65, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 75, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen img,
 .device-mobile img,
 .device-tablet img {
@@ -1813,7 +1819,7 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 76, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 86, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen {
     border-width: 2.5em 1px 1px 1px;
     border-style: solid;
@@ -1826,7 +1832,7 @@ nav li {
     border-top-right-radius: 10px;
   }
 
-  /* line 83, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 93, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-mobile {
     border-width: 4em .5em 4em .5em;
     border-style: solid;
@@ -1838,7 +1844,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 90, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 100, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-tablet {
     border-width: .5em 4em;
     border-style: solid;
@@ -1850,7 +1856,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 100, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 110, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen img,
   .device-mobile img,
   .device-tablet img {
@@ -1858,7 +1864,7 @@ nav li {
     margin-bottom: 0;
   }
 }
-/* line 107, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 117, ../_mistermachine_compass/scss/views/_patterns.scss */
 nav img {
   margin-left: auto;
   margin-right: auto;

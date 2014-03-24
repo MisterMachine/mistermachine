@@ -28,7 +28,4 @@ img, video, object {
 .round {
 	@include border-radius(50%);
 	overflow: hidden;
-	border-width: 3px;
-	border-color: $dim-color;
-	border-style: solid;
 }

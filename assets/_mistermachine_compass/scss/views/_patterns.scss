@@ -45,6 +45,16 @@ $row-content-max-width: emCalc(820px);
 	}
 }
 
+.bullets {
+	.round {
+		background: $blank-color;
+		display: block;
+		height: 4em;
+		width: 4em;
+		margin: 0 auto .5em;
+	}
+}
+
 .slide.row {
 	margin-bottom: $row-padding * 2;
 	margin-left: auto;
