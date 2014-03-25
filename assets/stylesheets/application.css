@@ -1392,7 +1392,7 @@ small {
 
 /* line 207, ../_mistermachine_compass/scss/global/_typography.scss */
 .no-margin {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* line 211, ../_mistermachine_compass/scss/global/_typography.scss */
@@ -1405,7 +1405,7 @@ nav li {
 \*------------------------------------*/
 /* line 10, ../_mistermachine_compass/scss/modules/_control.scss */
 .control {
-  margin-bottom: 26px;
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 48em) {
   /* line 10, ../_mistermachine_compass/scss/modules/_control.scss */
@@ -1787,27 +1787,48 @@ nav li {
     margin-bottom: 1.625rem;
   }
 }
-/* line 25, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 26, ../_mistermachine_compass/scss/views/_patterns.scss */
 .process h2, .services h2 {
   padding-top: 26px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 25, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 26, ../_mistermachine_compass/scss/views/_patterns.scss */
   .process h2, .services h2 {
     padding-top: 78px;
   }
 }
+/* line 33, ../_mistermachine_compass/scss/views/_patterns.scss */
+.process p, .services p {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 48em) {
+  /* line 33, ../_mistermachine_compass/scss/views/_patterns.scss */
+  .process p, .services p {
+    margin-bottom: 26px;
+  }
+}
 
-/* line 34, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 42, ../_mistermachine_compass/scss/views/_patterns.scss */
 .work article {
   margin-bottom: 78px;
 }
-/* line 37, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 45, ../_mistermachine_compass/scss/views/_patterns.scss */
 .work article:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 45, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 56, ../_mistermachine_compass/scss/views/_patterns.scss */
+.inline-screens {
+  max-height: 300px;
+  width: 9000px;
+}
+/* line 60, ../_mistermachine_compass/scss/views/_patterns.scss */
+.inline-screens li {
+  float: left;
+  display: block;
+}
+
+/* line 66, ../_mistermachine_compass/scss/views/_patterns.scss */
 .bullets .round {
   background: white;
   display: block;
@@ -1816,7 +1837,7 @@ nav li {
   margin: 0 auto .5em;
 }
 
-/* line 54, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 75, ../_mistermachine_compass/scss/views/_patterns.scss */
 .slide.row {
   margin-bottom: 52px;
   margin-left: auto;
@@ -1824,19 +1845,19 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 60, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 81, ../_mistermachine_compass/scss/views/_patterns.scss */
   .inner-words {
     padding: 2em;
   }
 }
 
-/* line 68, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 89, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen,
 .device-mobile,
 .device-tablet {
   border: 0;
 }
-/* line 71, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 92, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen img,
 .device-mobile img,
 .device-tablet img {
@@ -1849,7 +1870,7 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 82, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 103, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen {
     border-width: 2.5em 1px 1px 1px;
     border-style: solid;
@@ -1862,7 +1883,7 @@ nav li {
     border-top-right-radius: 10px;
   }
 
-  /* line 89, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 110, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-mobile {
     border-width: 4em .5em 4em .5em;
     border-style: solid;
@@ -1874,7 +1895,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 96, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 117, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-tablet {
     border-width: .5em 4em;
     border-style: solid;
@@ -1886,7 +1907,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 106, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 127, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen img,
   .device-mobile img,
   .device-tablet img {
@@ -1894,7 +1915,7 @@ nav li {
     margin-bottom: 0;
   }
 }
-/* line 113, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 134, ../_mistermachine_compass/scss/views/_patterns.scss */
 nav img {
   margin-left: auto;
   margin-right: auto;

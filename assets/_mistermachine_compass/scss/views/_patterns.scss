@@ -13,6 +13,7 @@ $row-content-max-width: emCalc(820px);
 	.silo {
 			@include rhythm(0, 0, 0, 0);
 			text-align: center;
+			
 			@include breakpoint( portrait ) {
 				text-align: left;
 				max-width: $row-content-max-width;
@@ -28,6 +29,13 @@ $row-content-max-width: emCalc(820px);
 				padding-top: $row-padding * 3;
 		}
 	}
+	
+	p {
+		margin-bottom: 0;
+		@include breakpoint( medium ) {
+			margin-bottom: $row-padding;
+		}
+	}
 }
 
 .work {
@@ -39,6 +47,19 @@ $row-content-max-width: emCalc(820px);
 	}
 	
 	}
+}
+
+.dribbble {
+		
+}
+
+.inline-screens {
+	max-height: 300px;
+	width: 9000px;
+	
+	li {
+		float: left; display: block;
+	}	
 }
 
 .bullets {

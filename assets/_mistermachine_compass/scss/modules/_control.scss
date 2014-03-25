@@ -8,7 +8,7 @@ $control-unit: remCalc(40px);
 }
 
 .control {
-	margin-bottom: $column-padding;
+	margin-bottom: 0;
 	
 	@include breakpoint( medium ) { 
 		margin-bottom: $column-padding;
