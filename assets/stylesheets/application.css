@@ -1828,7 +1828,28 @@ nav li {
   display: block;
 }
 
-/* line 66, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 65, ../_mistermachine_compass/scss/views/_patterns.scss */
+.tint-overlay {
+  position: relative;
+}
+
+/* line 69, ../_mistermachine_compass/scss/views/_patterns.scss */
+.tint-overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: -webkit-linear-gradient(top, transparent 20%, rgba(0, 0, 0, 0.2));
+  -moz-transition: background .3s linear;
+  -webkit-transition: background .3s linear;
+  -o-transition: background .3s linear;
+  transition: background .3s linear;
+}
+
+/* line 85, ../_mistermachine_compass/scss/views/_patterns.scss */
 .bullets .round {
   background: white;
   display: block;
@@ -1837,7 +1858,7 @@ nav li {
   margin: 0 auto .5em;
 }
 
-/* line 75, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 94, ../_mistermachine_compass/scss/views/_patterns.scss */
 .slide.row {
   margin-bottom: 52px;
   margin-left: auto;
@@ -1845,19 +1866,19 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 81, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 100, ../_mistermachine_compass/scss/views/_patterns.scss */
   .inner-words {
     padding: 2em;
   }
 }
 
-/* line 89, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 108, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen,
 .device-mobile,
 .device-tablet {
   border: 0;
 }
-/* line 92, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 111, ../_mistermachine_compass/scss/views/_patterns.scss */
 .device-screen img,
 .device-mobile img,
 .device-tablet img {
@@ -1870,7 +1891,7 @@ nav li {
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 103, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 122, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen {
     border-width: 2.5em 1px 1px 1px;
     border-style: solid;
@@ -1883,7 +1904,7 @@ nav li {
     border-top-right-radius: 10px;
   }
 
-  /* line 110, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 129, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-mobile {
     border-width: 4em .5em 4em .5em;
     border-style: solid;
@@ -1895,7 +1916,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 117, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 136, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-tablet {
     border-width: .5em 4em;
     border-style: solid;
@@ -1907,7 +1928,7 @@ nav li {
     border-radius: 20px;
   }
 
-  /* line 127, ../_mistermachine_compass/scss/views/_patterns.scss */
+  /* line 146, ../_mistermachine_compass/scss/views/_patterns.scss */
   .device-screen img,
   .device-mobile img,
   .device-tablet img {
@@ -1915,7 +1936,7 @@ nav li {
     margin-bottom: 0;
   }
 }
-/* line 134, ../_mistermachine_compass/scss/views/_patterns.scss */
+/* line 153, ../_mistermachine_compass/scss/views/_patterns.scss */
 nav img {
   margin-left: auto;
   margin-right: auto;
