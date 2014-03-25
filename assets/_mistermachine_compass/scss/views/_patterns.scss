@@ -30,6 +30,17 @@ $row-content-max-width: emCalc(820px);
 	}
 }
 
+.work {
+	article {
+		margin-bottom: $row-padding * 3;
+	
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	}
+}
+
 .bullets {
 	.round {
 		background: $blank-color;
