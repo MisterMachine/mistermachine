@@ -1,34 +1,29 @@
-var App = function(){
+var MRM = (function() {
 
-  /* private */
-  /* end private */
+  var $ = jQuery;
 
   return {
 
     init: function() {
-      App.add_parallax_events();
+      this.setPageScrollEvents();
     },
 
-    add_parallax_events: function(){
-      // Cache the Window object
-      $window = $(window);
-      $('figure[data-type="background"]').each(function(){
-        var $bgobj = $(this); // assigning the object
-        $(window).scroll(function() {
-          // Scroll the background at var speed
-          // the yPos is a negative value because we're scrolling it UP!
-          var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-          // Put together our final background position
-          var coords = '50% '+ yPos + 'px';
-          // Move the background
-          $bgobj.css({ backgroundPosition: coords });
-        }); // window scroll Ends
+    setPageScrollEvents: function() {
+      // Add click event with animated scroll
+      $('.menu-items a').on('click', function(e){
+        e.preventDefault();
+
+        var speed = 500,
+          idLink = $(this).attr('href'),
+          loc = $(idLink).offset().top;
+
+        $('body').animate( { scrollTop: loc }, speed );
       });
-    },
+    }
 
   };
-}();
+} () );
 
-$(document).ready(function($j){
-  App.init();
+jQuery(document).ready(function() {
+  MRM.init();
 });
